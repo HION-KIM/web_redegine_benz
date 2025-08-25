@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benz-header</title>
-<!-- 내부링크 -->
-<link rel="stylesheet" href="../style.css">
+  <!-- 외부링크 -->
+  <!-- 제이쿼리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- 내부링크 -->
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
   <header>
     <div class="header_inner">
       <div class="logo_box">
-        <img src="../imgs/benz_log.svg" alt="">
+        <a href="#"><img src="../imgs/benz_log.svg" alt=""></a>
       </div>
       <nav class="menu_box">
-        <ul>
+        <ul class="accordion">
           <li><a href="#">Models</a></li>
           <li><a href="#">Buy</a></li>
           <li><a href="#">Suervices</a></li>
@@ -34,38 +40,425 @@
         </div>
       </div>
     </div>
+    <div class="side_menu_box">
+      <div class="side_menu_bar">
+        <nav class="menu_1">
+          <ul class="accordion">
+            <li><a href="#">All Models</a></li>
+            <li><a href="#">전기 자동차</a></li>
+            <li><a href="#">플러그인 하이브리드</a></li>
+            <li><a href="#">Sedan</a>
+              <ul>
+                <li><a href="#">All Sedans</a></li>
+                <li><a href="#">A-Class</a></li>
+                <li><a href="#">C-Class</a></li>
+                <li><a href="#">EQE</a></li>
+                <li><a href="#">EQS Long</a></li>
+                <li><a href="#">E-Class</a></li>
+                <li><a href="#">S-Class</a></li>
+                <li><a href="#">S-Class Long</a></li>
+                <li><a href="#">Mercedes-Maybach S-Class</a></li>
+              </ul>
+            </li>
+            <li><a href="#">SUV</a>
+              <ul>
+                <li><a href="#">All SUVs</a></li>
+                <li><a href="#">EQA</a></li>
+                <li><a href="#">EQB</a></li>
+                <li><a href="#">EQE SUV</a></li>
+                <li><a href="#">EQS SUV</a></li>
+                <li><a href="#">Mercedes-Maybach EQS SUV</a></li>
+                <li><a href="#">GLA</a></li>
+                <li><a href="#">GLB</a></li>
+                <li><a href="#">GLC</a></li>
+                <li><a href="#">GLC Coupe</a></li>
+                <li><a href="#">GLE Coupe</a></li>
+                <li><a href="#">GLS</a></li>
+                <li><a href="#">Mercedes-Maybach GLS</a></li>
+                <li><a href="#">G-Class</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Hatchback</a>
+              <ul>
+                <li><a href="#">A-Class Hatch</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Coupe</a>
+              <ul>
+                <li><a href="#">All Coupe</a></li>
+                <li><a href="#">CLA Coupe</a></li>
+                <li><a href="#">CLE Coupe</a></li>
+                <li><a href="#">Mercedes-AMG GT Coupe</a></li>
+                <li><a href="#">Mercedes-AMG GT 4-Door Coupe</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Cabriolet & Roadster</a>
+              <ul>
+                <li><a href="#">All Cabriolets & Roadsters</a></li>
+                <li><a href="#">CLE Cabriolet</a></li>
+                <li><a href="#">SL Roadster</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Van</a>
+            </li>
+          </ul>
+          <div class="logo_btn">
+            <a href="#"><img src="../imgs/AMG_logo_w.svg" alt=""></a>
+            <a href="#"><img src="../imgs/MAYBACH_logo_w.svg" alt=""></a>
+          </div>
+        </nav>
+        <nav class="menu_2">
+          <ul class="accordion">
+            <li><a href="#">메르세데스-벤츠 스토어</a></li>
+            <li><a href="#">온라인 라이브 상담</a></li>
+            <li><a href="#">인증 중고차 스토어</a></li>
+            <li><a href="#">인증 중고차 소개</a></li>
+            <li><a href="#">금융서비스 안내</a></li>
+            <li><a href="#">금융 프로모션</a></li>
+            <li><a href="#">법인 우대 프로그램</a></li>
+            <li><a href="#">온라인 시승 신청</a></li>
+            <li><a href="#">디지털 서비스 상품</a></li>
+            <li><a href="#">순정 액세서리 - 컬렉션 및 용품</a>
+              <ul>
+                <li><a href="#">메르세데스 순정 액세서리</a></li>
+                <li><a href="#">컬렉션</a></li>
+                <li><a href="#">카케어 용품</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu_3">
+          <ul class="accordion">
+            <li><a href="#">All Services</a></li>
+            <li><a href="#">충전 및 디지털 서비스</a></li>
+            <li><a href="#">온라인 서비스 예약</a></li>
+            <li><a href="#">서비스 상품 안내</a></li>
+            <li><a href="#">수리 서비스</a></li>
+            <li><a href="#">고장 및 손상 지원</a></li>
+            <li><a href="#">보험 상품</a></li>
+            <li><a href="#">장기 렌터카 프로그램</a></li>
+            <li><a href="#">메르세데스-벤츠 앱</a></li>
+            <li><a href="#">Mercedes me Care 멤버십</a></li>
+            <li><a href="#">차량 별 사용 설명서 및 정보</a>
+              <ul>
+                <li><a href="#">사용 설명서</a></li>
+                <li><a href="#">전기차 차종별 배터리셀 제조사 현황</a></li>
+              </ul>
+            </li>
+            <li><a href="#">고객 컨택 센터</a></li>
+          </ul>
+        </nav>
+        <nav class="menu_4">
+          <ul class="accordion">
+            <li><a href="#">About Mercedes-Benz</a>
+              <ul>
+                <li><a href="#">히스토리 & 브랜드</a></li>
+                <li><a href="#">Mercedes - AMG</a></li>
+                <li><a href="#">Mercedes - Maybach</a></li>
+                <li><a href="#">MANUFAKTUR</a></li>
+                <li><a href="#">Defining Class</a></li>
+                <li><a href="#">서체 다운로드</a></li>
+              </ul>
+            </li>
+            <li><a href="#">기술 및 혁신</a>
+              <ul>
+                <li><a href="#">메르세데스-드라이빙 어시스턴스 시스템</a></li>
+                <li><a href="#">MBUX 멀티미디어 시스템</a></li>
+                <li><a href="#">Over-the-Air 업데이트</a></li>
+                <li><a href="#">디자인 & 콘셉트 카\</a></li>
+                <li><a href="#">메르세데스-벤츠 전기차</a></li>
+                <li><a href="#">EQXX</a></li>
+                <li><a href="#">Innovation from Mercedes</a></li>
+                <li><a href="#">지속 가능한 모빌리티</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Driving Experience Program</a>
+              <ul>
+                <li><a href="#">AMG Experience</a></li>
+                <li><a href="#">SUV Experience</a></li>
+              </ul>
+            </li>
+            <li><a href="#">공지/뉴스</a>
+              <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">AET 교육생 모집 공고</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
 
-    <style>
-      header{
-        color:#FFF;
-        background-color:#000;
-      }
-      .header_inner{
-        max-width:1920px;
-        border:1px solid red;
-        display:flex;
-        padding:0 120px;
-        height:100px;
-      }
-      .header_inner .logo_box{
-        align-self: center;
-      }
-      .header_inner .logo_box >img{
-        width:224px;
-      }
-      .header_inner .menu_box > ul{
-        padding:0 70px;
-        display:flex;
-        height:100%;
-      }
-      .header_inner .menu_box > ul > li{
-
-      }
-      .header_inner .grow{
-        flex-grow: 1;
-      }
-
-    </style>
+      </div>
+    </div>
   </header>
+  <style>
+    body {
+      background-color: blue;
+      height: 10000px;
+    }
+
+    /* ------- header start ------- */
+    header {
+      color: #FFF;
+      position: fixed;
+      width: 100vw;
+    }
+
+    /* ------- header_inner start ------- */
+    .header_inner {
+      max-width: 1920px;
+      display: flex;
+      margin: 0 auto;
+      padding: 0 120px;
+      height: 100px;
+      font-size: 18px;
+      font-weight: 500;
+      white-space: nowrap;
+      background-color: #000;
+    }
+
+    .header_inner .logo_box {
+      align-self: center;
+    }
+
+    .header_inner .logo_box img {
+      width: 224px;
+    }
+
+    .header_inner .menu_box>ul {
+      padding: 0 70px;
+      display: flex;
+      height: 100%;
+      gap: 58px;
+
+    }
+
+    .header_inner .menu_box>ul.active {
+      color: #808080;
+    }
+
+
+    .header_inner .menu_box>ul>li.active {
+      color: #fff;
+    }
+
+    .header_inner .menu_box>ul>li>a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .header_inner .menu_box>ul>li>a::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+
+    }
+
+    .header_inner .grow {
+      flex-grow: 1;
+    }
+
+    .header_inner .util_box {
+      display: flex;
+      align-items: center;
+    }
+
+    .header_inner .util_box>div {
+      height: 100%;
+    }
+
+    .header_inner .util_box>div:nth-child(2) {
+      margin: 0 58px;
+    }
+
+    .header_inner .util_box>div>a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .header_inner .util_box .hamberger {
+      width: 32px;
+      height: 32px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px 0;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .header_inner .util_box .hamberger div {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    /* ------- header_inner end ------- */
+    /* ------- side_menu_box start ------- */
+    .side_menu_box {
+      backdrop-filter: blur(30px);
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .4s ease;
+    }
+
+    .side_menu_box.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .side_menu_box .side_menu_bar {
+      width: 20%;
+      height: 100%;
+      background-color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      position: absolute;
+      padding: 40px;
+      box-sizing: border-box;
+      top: 0;
+      left: -20%;
+      transition: left .4s ease;
+    }
+
+    .side_menu_box.active .side_menu_bar {
+      left: 0;
+    }
+
+    .side_menu_box .side_menu_bar nav {
+      display: none;
+    }
+
+    .side_menu_box .side_menu_bar nav.active {
+      display: block;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li>ul {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #484B4D;
+      left: 100%;
+      top: 0;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .side_menu_box .side_menu_bar nav ul ul {
+      display: none;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li.active>ul {
+      display: block;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li>a {
+      padding: 16px 10px;
+      display: flex;
+      justify-content: space-between;
+      transition: padding .4s;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li.active>a {
+      background-color: #1A1A1A;
+      padding-left: 20px;
+      border-radius: 4px;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li>ul>li:hover>a {
+      background-color: #606466;
+      padding-left: 20px;
+      border-radius: 4px;
+    }
+
+    .side_menu_box .side_menu_bar nav a:not(:only-child)::after {
+      content: url(../imgs/fi-rr-angle-small-right.svg);
+      margin-top: -4px;
+      display: none;
+    }
+
+    .side_menu_box .side_menu_bar nav ul>li.active>a:not(:only-child)::after {
+      display: block;
+    }
+
+
+
+    .side_menu_box .side_menu_bar .logo_btn {
+      padding: 24px 0;
+      display: flex;
+    }
+
+    .side_menu_box .side_menu_bar .logo_btn a {
+      width: 146px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+    }
+
+    .side_menu_box .side_menu_bar .logo_btn a:first-child {
+      margin-right: 12px;
+    }
+
+    .side_menu_box .side_menu_bar .logo_btn img {
+      height: 10px;
+    }
+  </style>
+
+  <script>
+    $('.menu_box>ul').mouseover(function () {
+      $(this).addClass('active');
+      $('.side_menu_box').addClass('active');
+
+      return false;
+    });
+
+    $('.header_inner').mouseover(function () {
+      $('.menu_box>ul').removeClass('active');
+      $('.side_menu_box').removeClass('active');
+      $('.accordion > *').removeClass('active');
+    });
+
+    $('.side_menu_box').click(function () {
+      $('.menu_box>ul').removeClass('active');
+      $('.side_menu_box').removeClass('active');
+      $('.accordion > *').removeClass('active');
+    });
+
+    $('.side_menu_bar').click(function () {
+      return false;
+    });
+
+    $('.side_menu_bar .accordion > *').mouseover(function () {
+      let $this = $(this);
+      $this.parent().children().removeClass('active');
+      $this.addClass('active');
+    });
+
+    function sideMenu() {
+      $('.header_inner .accordion > *').mouseover(function () {
+        let $this = $(this);
+        $this.parent().children().removeClass('active');
+        $this.addClass('active');
+        $('.side_menu_bar .accordion > *').removeClass('active')
+
+        var index = $('.menu_box>ul>li.active').index();
+
+        $(".side_menu_bar nav").parent().children().removeClass('active');
+        $(".side_menu_bar nav").eq(index).addClass("active");
+
+      });
+    }
+    sideMenu();
+  </script>
 </body>
+
 </html>
