@@ -189,6 +189,33 @@
 
       </div>
     </div>
+    <div class="hamberger_box">
+      <div>
+        <div class="img_box"><img src="../imgs/벤츠로고심벌.png" alt=""></div>
+        <div class="search_box">
+          <input type="text" placeholder="검색어/모델코드를 입력하세요."></input>
+          <img src="../imgs/hamberger_search.svg" alt="">
+        </div>
+        <div class="teg_box">
+          <div>
+            <div>시승 신청</div>
+            <div>구매 상담 신청</div>
+            <div>전시장 찾기</div>
+            <div>서비스센터 찾기</div>
+            <div>전기자동차</div>
+          </div>
+          <div>
+            <div>S-Class</div>
+            <div>GLC Coupe</div>
+            <div>EQS Long</div>
+            <div>C-Class</div>
+            <div>A-Class</div>
+          </div>
+        </div>
+        <div class="closed_box">
+        </div>
+      </div>
+    </div>
   </header>
   <style>
     body {
@@ -411,37 +438,154 @@
     .side_menu_box .side_menu_bar .logo_btn img {
       height: 10px;
     }
+
+    /* ------- side_menu_box end ------- */
+    /* ------- hamberger_box start ------- */
+    .hamberger_box {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      z-index: -1;
+      padding: 180px 0;
+    }
+
+    .hamberger_box.active{
+      visibility: visible;
+      opacity: 1;
+      top:0;
+    }
+    .hamberger_box>div{
+      max-width:1920px;
+      height:100%;
+      position: relative;
+      margin:0 auto;
+    }
+
+    .hamberger_box .img_box img {
+      display: block;
+      width: 270px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    .hamberger_box .search_box {
+      display: flex;
+      width: 1120px;
+      height: 70px;
+      border-radius: 50px;
+      background-color: #fff;
+      margin: 0 auto;
+      padding: 0 40px;
+      color: #222;
+    }
+
+    .hamberger_box .search_box input {
+      font-weight: 500;
+      font-size: 22px;
+      flex-grow: 1;
+      padding: 0;
+      border: none;
+      height: 100%;
+    }
+
+    .hamberger_box .search_box input:focus {
+      outline: none;
+    }
+
+    .hamberger_box .search_box img {
+      height: 31px;
+      align-self: center;
+      cursor: pointer;
+    }
+
+    .hamberger_box .teg_box {
+      margin-top: 40px;
+      width: 1120px;
+      margin: 40px auto 0 auto;
+    }
+
+    .hamberger_box .teg_box>div {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 22px;
+      justify-content: center;
+    }
+
+    .hamberger_box .teg_box div>div {
+      padding: 10px 30px;
+      color: #fff;
+      border: 1px solid #fff;
+      font-size: 22px;
+      font-weight: 500;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all .4s ease;
+    }
+
+    .hamberger_box .teg_box div>div:hover {
+      background-color: #fff;
+      color: #222;
+    }
+
+    .hamberger_box .closed_box {
+      position: absolute;
+      top: -28px;
+      right: 13%;
+      width: 40px;
+      height: 40px;
+      transition: transform .4s ease;
+      cursor: pointer;
+    }
+
+    .hamberger_box .closed_box:hover {
+      transform: rotate(-105deg);
+    }
+
+
+    .hamberger_box .closed_box::after,
+    .hamberger_box .closed_box::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: rotate(45deg);
+      background-color: #fff;
+    }
+
+    .hamberger_box .closed_box::before {
+      transform: rotate(-45deg);
+    }
+
+    .hamberger_box .closed_box:hover::after,
+    .hamberger_box .closed_box:hover::before {
+      box-shadow: 0 0 5px #fff;
+    }
+
+
+    /* ------- hamberger_box end ------- */
   </style>
 
   <script>
-    $('.menu_box>ul').mouseover(function () {
-      $(this).addClass('active');
-      $('.side_menu_box').addClass('active');
+    function headerMenu() {
+      $('.menu_box>ul').mouseover(function () {
+        $(this).addClass('active');
+        $('.side_menu_box').addClass('active');
 
-      return false;
-    });
+        return false;
+      });
 
-    $('.header_inner').mouseover(function () {
-      $('.menu_box>ul').removeClass('active');
-      $('.side_menu_box').removeClass('active');
-      $('.accordion > *').removeClass('active');
-    });
-
-    $('.side_menu_box').click(function () {
-      $('.menu_box>ul').removeClass('active');
-      $('.side_menu_box').removeClass('active');
-      $('.accordion > *').removeClass('active');
-    });
-
-    $('.side_menu_bar').click(function () {
-      return false;
-    });
-
-    $('.side_menu_bar .accordion > *').mouseover(function () {
-      let $this = $(this);
-      $this.parent().children().removeClass('active');
-      $this.addClass('active');
-    });
+      $('.header_inner').mouseover(function () {
+        $('.menu_box>ul').removeClass('active');
+        $('.side_menu_box').removeClass('active');
+        $('.accordion > *').removeClass('active');
+      });
+    }
 
     function sideMenu() {
       $('.header_inner .accordion > *').mouseover(function () {
@@ -454,10 +598,29 @@
 
         $(".side_menu_bar nav").parent().children().removeClass('active');
         $(".side_menu_bar nav").eq(index).addClass("active");
+      });
 
+      $('.side_menu_box').click(function () {
+        $('.menu_box>ul').removeClass('active');
+        $('.side_menu_box').removeClass('active');
+        $('.accordion > *').removeClass('active');
+      });
+
+      $('.side_menu_bar').click(function () {
+        return false;
+      });
+
+      $('.side_menu_bar .accordion > *').mouseover(function () {
+        let $this = $(this);
+        $this.parent().children().removeClass('active');
+        $this.addClass('active');
       });
     }
+
+
+
     sideMenu();
+    headerMenu()
   </script>
 </body>
 
