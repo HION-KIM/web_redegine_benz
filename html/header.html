@@ -29,8 +29,8 @@
           <li><a href="#">Buy</a></li>
           <li><a href="#">Suervices</a></li>
           <li><a href="#">Brand</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Experience</a></li>
+          <li class="exception"><a href="#">Shop</a></li>
+          <li class="exception"><a href="#">Experience</a></li>
         </ul>
       </nav>
       <div class="grow"></div>
@@ -478,18 +478,9 @@
       width: 270px;
       margin: 0 auto;
       margin-bottom: 60px;
-      animation: hambergerLogoimg 0.7s timing-function delay iteration-count direction fill-mode;
     }
 
-    @keyframes hambergerLogoimg {
-      0% {
-        opacity: 0;
-      }
 
-      100% {
-        opacity: 1;
-      }
-    }
 
     .hamberger_box .search_box {
       display: flex;
@@ -529,7 +520,7 @@
 
     .hamberger_box .teg_box>div {
       display: flex;
-      gap: 24px;
+      gap: 8px;
       margin-bottom: 22px;
       justify-content: center;
     }
@@ -593,8 +584,8 @@
 
   <script>
     AOS.init();
-    
-    function headerMenu() {
+
+    function menuEvent() {
       $('.menu_box>ul').mouseover(function () {
         $(this).addClass('active');
         $('.side_menu_box').addClass('active');
@@ -607,19 +598,19 @@
         $('.side_menu_box').removeClass('active');
         $('.accordion > *').removeClass('active');
       });
-    }
 
-    function sideMenu() {
+
       $('.header_inner .accordion > *').mouseover(function () {
         let $this = $(this);
         $this.parent().children().removeClass('active');
         $this.addClass('active');
-        $('.side_menu_bar .accordion > *').removeClass('active')
 
         var index = $('.menu_box>ul>li.active').index();
 
         $(".side_menu_bar nav").parent().children().removeClass('active');
         $(".side_menu_bar nav").eq(index).addClass("active");
+
+        return false;
       });
 
       $('.side_menu_box').click(function () {
@@ -638,18 +629,19 @@
         $this.addClass('active');
       });
     }
+    function hambergerEvent() {
+      $('.hamberger').click(function () {
+        $('.hamberger_box').addClass('active');
+      });
 
-    $('.hamberger').click(function () {
-      $('.hamberger_box').addClass('active');
-    });
-
-    $('.hamberger_box .closed_box').click(function () {
-      $('.hamberger_box').removeClass('active');
-    });
+      $('.hamberger_box .closed_box').click(function () {
+        $('.hamberger_box').removeClass('active');
+      });
+    }
 
 
-    sideMenu();
-    headerMenu()
+    menuEvent();
+    hambergerEvent();
   </script>
 </body>
 
