@@ -193,7 +193,10 @@
     </div>
     <div class="search_board">
       <div>
-        <div class="img_box"><img src="../imgs/벤츠로고심벌.png" alt=""></div>
+        <div class="img_box">
+          <img class="logo" src="../imgs/벤츠로고심벌.png" alt="">
+          <img class="filter" src="../imgs/logo_shadow.svg" alt="">
+        </div>
         <div class="search_box">
           <input type="text" placeholder="검색어/모델코드를 입력하세요."></input>
           <img src="../imgs/search_icon_box.svg" alt="error">
@@ -314,8 +317,9 @@
       height: 32px;
       cursor: pointer;
     }
-    .header_inner .util_box .search_icon img{
-      display:block;
+
+    .header_inner .util_box .search_icon img {
+      display: block;
     }
 
     /* ------- header_inner end ------- */
@@ -323,8 +327,7 @@
     .side_menu_box {
       backdrop-filter: blur(30px);
       width: 100vw;
-      height: 100vh;
-      position: relative;
+      height: calc(100vh - 100px);
       visibility: hidden;
       opacity: 0;
       transition: all .4s ease;
@@ -336,7 +339,7 @@
     }
 
     .side_menu_box .side_menu_bar {
-      width: 20%;
+      width: 384px;
       height: 100%;
       background-color: #000;
       font-size: 18px;
@@ -346,7 +349,7 @@
       box-sizing: border-box;
       top: 0;
       left: -20%;
-      transition: left .4s ease;
+      transition: left .7s ease;
     }
 
     .side_menu_box.active .side_menu_bar {
@@ -366,25 +369,26 @@
       width: 100%;
       height: 100%;
       background-color: #484B4D;
-      left: 100%;
+      left: 0;
       top: 0;
       padding: 40px;
       box-sizing: border-box;
-    }
-
-    .side_menu_box .side_menu_bar nav ul ul {
-      display: none;
+      visibility: hidden;
+      z-index: -1;
+      overflow-y: scroll;
     }
 
     .side_menu_box .side_menu_bar nav ul>li.active>ul {
-      display: block;
+      visibility: visible;
+      left: 100%;
+      transition: all 0.7s 0.2s ease;
     }
 
     .side_menu_box .side_menu_bar nav ul>li>a {
       padding: 16px 10px;
       display: flex;
       justify-content: space-between;
-      transition: padding .4s;
+      transition: padding .7s;
     }
 
     .side_menu_box .side_menu_bar nav ul>li.active>a {
@@ -460,16 +464,39 @@
       height: 100%;
       position: relative;
       margin: 0 auto;
-      display:flex;
+      display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .search_board .img_box img {
+    .search_board .img_box {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .search_board .img_box img.logo {
       display: block;
       width: 214px;
       margin: 0 auto;
       margin-bottom: 64px;
+    }
+
+    .search_board .img_box img.filter {
+      width: 214px;
+      display: block;
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      z-index: 100;
+      opacity: 0;
+      transition: all 1.2s 0.8s ease;
+    }
+
+    .search_board .img_box img.filter.active {
+      top: 0;
+      left: 0;
+      opacity: 1;
     }
 
     .search_board .search_box {
@@ -620,10 +647,12 @@
     function SearchIconEvent() {
       $('.search_icon').click(function () {
         $('.search_board').addClass('active');
+        $('.search_board .img_box > .filter').addClass('active');
       });
 
       $('.search_board .closed_box').click(function () {
         $('.search_board').removeClass('active');
+        $('.search_board .img_box > .filter').removeClass('active');
       });
     }
 
