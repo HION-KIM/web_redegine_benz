@@ -37,10 +37,8 @@
       <div class="util_box">
         <div><a href="#">고객센터</a></div>
         <div><a href="#">My Page</a></div>
-        <div class="hamberger">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div class="search_icon">
+          <div><img src="../imgs/search_icon_header.png" alt="error"></div>
         </div>
       </div>
     </div>
@@ -193,12 +191,12 @@
 
       </div>
     </div>
-    <div class="hamberger_box">
+    <div class="search_board">
       <div>
         <div class="img_box"><img src="../imgs/벤츠로고심벌.png" alt=""></div>
         <div class="search_box">
           <input type="text" placeholder="검색어/모델코드를 입력하세요."></input>
-          <img src="../imgs/hamberger_search.svg" alt="">
+          <img src="../imgs/search_icon_box.svg" alt="error">
         </div>
         <div class="teg_box">
           <div>
@@ -311,23 +309,13 @@
       align-items: center;
     }
 
-    .header_inner .util_box .hamberger {
+    .header_inner .util_box .search_icon {
       width: 32px;
       height: 32px;
-      padding: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 4px 0;
-      box-sizing: border-box;
       cursor: pointer;
     }
-
-    .header_inner .util_box .hamberger div {
-      width: 100%;
-      height: 2px;
-      background-color: #fff;
-      border-radius: 10px;
+    .header_inner .util_box .search_icon img{
+      display:block;
     }
 
     /* ------- header_inner end ------- */
@@ -446,8 +434,8 @@
     }
 
     /* ------- side_menu_box end ------- */
-    /* ------- hamberger_box start ------- */
-    .hamberger_box {
+    /* ------- search_board start ------- */
+    .search_board {
       width: 100vw;
       height: 100vh;
       position: absolute;
@@ -455,97 +443,95 @@
       left: 0;
       background-color: #000;
       z-index: -1;
-      padding: 180px 0;
       visibility: hidden;
       opacity: 0;
       top: -100%;
       transition: all 0.7s ease;
     }
 
-    .hamberger_box.active {
+    .search_board.active {
       visibility: visible;
       opacity: 1;
       top: 0;
     }
 
-    .hamberger_box>div {
-      max-width: 1920px;
+    .search_board>div {
+      max-width: 1600px;
       height: 100%;
       position: relative;
       margin: 0 auto;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .hamberger_box .img_box img {
+    .search_board .img_box img {
       display: block;
-      width: 270px;
+      width: 214px;
       margin: 0 auto;
-      margin-bottom: 60px;
+      margin-bottom: 64px;
     }
 
-
-
-    .hamberger_box .search_box {
+    .search_board .search_box {
       display: flex;
-      width: 1120px;
-      height: 70px;
-      border-radius: 50px;
+      width: 896px;
+      height: 56px;
+      border-radius: 40px;
       background-color: #fff;
       margin: 0 auto;
-      padding: 0 40px;
-      color: #222;
+      padding: 0 32px;
     }
 
-    .hamberger_box .search_box input {
+    .search_board .search_box input {
       font-weight: 500;
-      font-size: 22px;
+      font-size: 18px;
       flex-grow: 1;
       padding: 0;
       border: none;
       height: 100%;
     }
 
-    .hamberger_box .search_box input:focus {
+    .search_board .search_box input:focus {
       outline: none;
     }
 
-    .hamberger_box .search_box img {
-      height: 31px;
+    .search_board .search_box img {
+      height: 25px;
       align-self: center;
       cursor: pointer;
     }
 
-    .hamberger_box .teg_box {
-      margin-top: 40px;
-      width: 1120px;
-      margin: 40px auto 0 auto;
+    .search_board .teg_box {
+      width: 896px;
+      margin: 48px auto 0 auto;
     }
 
-    .hamberger_box .teg_box>div {
+    .search_board .teg_box>div {
       display: flex;
-      gap: 8px;
-      margin-bottom: 22px;
+      gap: 16px;
+      margin-bottom: 18px;
       justify-content: center;
     }
 
-    .hamberger_box .teg_box div>div {
-      padding: 10px 30px;
+    .search_board .teg_box div>div {
+      padding: 8px 24px;
       color: #fff;
       border: 1px solid #fff;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 500;
-      border-radius: 50px;
+      border-radius: 40px;
       cursor: pointer;
       transition: all .4s ease;
     }
 
-    .hamberger_box .teg_box div>div:hover {
+    .search_board .teg_box div>div:hover {
       background-color: #fff;
       color: #222;
     }
 
-    .hamberger_box .closed_box {
+    .search_board .closed_box {
       position: absolute;
-      top: -28px;
+      top: 164px;
       right: 13%;
       width: 40px;
       height: 40px;
@@ -553,13 +539,13 @@
       cursor: pointer;
     }
 
-    .hamberger_box .closed_box:hover {
+    .search_board .closed_box:hover {
       transform: rotate(-105deg);
     }
 
 
-    .hamberger_box .closed_box::after,
-    .hamberger_box .closed_box::before {
+    .search_board .closed_box::after,
+    .search_board .closed_box::before {
       content: "";
       display: block;
       position: absolute;
@@ -571,17 +557,17 @@
       background-color: #fff;
     }
 
-    .hamberger_box .closed_box::before {
+    .search_board .closed_box::before {
       transform: rotate(-45deg);
     }
 
-    .hamberger_box .closed_box:hover::after,
-    .hamberger_box .closed_box:hover::before {
+    .search_board .closed_box:hover::after,
+    .search_board .closed_box:hover::before {
       box-shadow: 0 0 5px #fff;
     }
 
 
-    /* ------- hamberger_box end ------- */
+    /* ------- search_board end ------- */
   </style>
 
   <script>
@@ -631,19 +617,19 @@
         $this.addClass('active');
       });
     }
-    function hambergerEvent() {
-      $('.hamberger').click(function () {
-        $('.hamberger_box').addClass('active');
+    function SearchIconEvent() {
+      $('.search_icon').click(function () {
+        $('.search_board').addClass('active');
       });
 
-      $('.hamberger_box .closed_box').click(function () {
-        $('.hamberger_box').removeClass('active');
+      $('.search_board .closed_box').click(function () {
+        $('.search_board').removeClass('active');
       });
     }
 
 
     menuEvent();
-    hambergerEvent();
+    SearchIconEvent();
   </script>
 </body>
 
