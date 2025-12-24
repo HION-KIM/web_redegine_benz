@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benz_banner</title>
-
+  <!-- Script Jquery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
+  <!-- Script Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
   <!-- Link inner CSS -->
@@ -301,14 +302,19 @@
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination">
+    </div>
+
+  </div>
   </div>
 
 
   <style>
+    /* ---------- Banner Custom Start ---------- */
     .banners {
       width: 100vw;
       height: calc(100vh - 100px);
+      white-space: nowrap;
     }
 
     .banners .swiper-slide {
@@ -316,7 +322,8 @@
       background: #444;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      padding-top: 7vh;
     }
 
     .banners .swiper-slide>img {
@@ -331,15 +338,15 @@
     }
 
     .banners .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       color: #fff;
       max-width: 1320px;
       width: 100%;
+      height: 77%;
       padding: 0 36px;
       text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.25);
-    }
-
-    .banners .content .text-box {
-      margin-bottom: 489px;
     }
 
     .banners .content .text-box>div {
@@ -349,6 +356,7 @@
     .banners .content .text-box>.brand-name {
       font-size: 20px;
       font-weight: 500;
+      line-height: .74;
     }
 
     .banners .content .text-box .h1 {
@@ -372,16 +380,89 @@
       height: 24px;
       display: block;
     }
+
+    .banners .content .button>div>a>.icon {
+      transition: all .7s ease;
+    }
+
+    .banners .content .button>div:hover>a>.icon {
+      transform: translateX(40%);
+    }
+
+    .banners .content .button>div>a>span {
+      position: relative;
+    }
+
+    .banners .content .button>div>a>span::after {
+      content: "";
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      background-color: #fff;
+      transition:all .7s ease;
+    }
+    .banners .content .button>div:hover>a>span::after{
+      width:100%;
+    }
+
+    /* ---------- Banner Custom End ---------- */
+
+
+    /* ---------- Swiper Pagination Custom Start ---------- */
+    .swiper-pagination {
+      bottom: var(--swiper-pagination-bottom, 5%) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .swiper-pagination>.swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: .7;
+    }
+
+    .swiper-pagination>.swiper-pagination-bullet-active {
+      background-color: transparent;
+      border: 3px solid #fff;
+      opacity: 1;
+    }
+
+    .swiper-pagination::after {
+      content: "";
+      height: 18px;
+      width: 4px;
+      border-left: 4px solid #fff;
+      border-right: 4px solid #fff;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    /* ---------- Swiper Pagination Custom End ---------- */
   </style>
 
 
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      speed: 1000,
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
       },
     });
+
+    swiper.autoplay.stop();
+
+
   </script>
 </body>
 
