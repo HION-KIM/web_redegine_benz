@@ -302,7 +302,18 @@
         </div>
       </div>
     </div>
-    <div class="swiper-pagination">
+    <div class="swiper-pagination-wrapper">
+      <div class="swiper-pagination">
+      </div>
+      <div class="toggle-btn">
+        <div class="pause active">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="play">
+          <img src="../imgs/benz-icon-play.svg" alt="play-icon">
+        </div>
+      </div>
     </div>
 
   </div>
@@ -401,18 +412,30 @@
       bottom: -4px;
       left: 0;
       background-color: #fff;
-      transition:all .7s ease;
+      transition: all .7s ease;
     }
-    .banners .content .button>div:hover>a>span::after{
-      width:100%;
+
+    .banners .content .button>div:hover>a>span::after {
+      width: 100%;
     }
 
     /* ---------- Banner Custom End ---------- */
 
 
     /* ---------- Swiper Pagination Custom Start ---------- */
+    .swiper-pagination-wrapper {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
     .swiper-pagination {
-      bottom: var(--swiper-pagination-bottom, 5%) !important;
+      position: static !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -432,22 +455,51 @@
       opacity: 1;
     }
 
-    .swiper-pagination::after {
-      content: "";
+    .swiper-pagination-wrapper>.toggle-btn {
+      cursor: pointer;
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.pause {
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.pause.active {
+      display: flex;
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.pause>div {
       height: 18px;
       width: 4px;
-      border-left: 4px solid #fff;
-      border-right: 4px solid #fff;
-      cursor: pointer;
-      margin-left: 8px;
+      margin-right: 4px;
+      background-color: #fff;
+
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.play {
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.play.active {
+      display: flex;
+
+    }
+
+    .swiper-pagination-wrapper>.toggle-btn>.play img {
+      display: block;
+      width: 16px;
     }
 
     /* ---------- Swiper Pagination Custom End ---------- */
   </style>
 
-
-  <!-- Initialize Swiper -->
   <script>
+
+    let $autoPlayState = true;
+
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       speed: 1000,
@@ -458,9 +510,32 @@
       autoplay: {
         delay: 3000,
       },
+      on: {
+        init: function () {
+          $autoPlayState = this.autoplay.running;
+        }
+      }
     });
 
-    swiper.autoplay.stop();
+
+
+
+    $('.toggle-btn').click(function () {
+      if ($autoPlayState) {
+        swiper.autoplay.stop();
+        $('.play').addClass('active');
+        $('.pause').removeClass('active');
+      } else {
+        swiper.autoplay.start();
+        $('.pause').addClass('active');
+        $('.play').removeClass('active');
+      }
+
+      $autoPlayState = !$autoPlayState;
+    })
+
+    autoPlayToggle();
+
 
 
   </script>
