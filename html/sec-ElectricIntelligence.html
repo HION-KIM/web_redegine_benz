@@ -30,21 +30,33 @@
         <nav>
           <ul>
             <li>
-              <div class="img-box"><img src="../imgs/img-Electric-item-1.jpg" alt="img-Electric-item"></div>
+              <div class="img-box">
+                <a href="#">
+                  <img src="../imgs/img-Electric-item-1.png" alt="img-Electric-item">
+                </a>
+              </div>
               <div class="text-box">
                 <span>편리한 충전</span>
                 <p>Mercedes me Charge 멤버십 카드 한 장으로 전국 대부분의 공용 충전소에서 편리하게 충전할 수 있습니다.</p>
               </div>
             </li>
             <li>
-              <div class="img-box"><img src="../imgs/img-Electric-item-2.jpg" alt="img-Electric-item"></div>
+              <div class="img-box">
+                <a href="#">
+                  <img src="../imgs/img-Electric-item-2.png" alt="img-Electric-item">
+                </a>
+              </div>
               <div class="text-box">
                 <span>스마트 보조 장치 시스템</span>
                 <p>벤츠 전기차는 효율적인 주행 모드와 회생 제동을 통해 주행 가능 거리를 늘려, 목적지까지 편안한 이동을 지원합니다</p>
               </div>
             </li>
             <li>
-              <div class="img-box"><img src="../imgs/img-Electric-item-3.jpg" alt="img-Electric-item"></div>
+              <div class="img-box">
+                <a href="#">
+                  <img src="../imgs/img-Electric-item-3.png" alt="img-Electric-item">
+                </a>
+              </div>
               <div class="text-box">
                 <span>정교한 구동 시스템</span>
                 <p>메르세데스-벤츠 전기차만의 정교한 구동 시스템으로, 조용하면서도 강력한 전동 퍼포먼스를 직접 경험해보세요.</p>
@@ -60,10 +72,84 @@
     .sec-Electric-Intelligence .Electric-banner {
       width: 100%;
     }
-    
+
     .sec-Electric-Intelligence .Electric-banner img {
       display: block;
+      width: 100%;
+
+    }
+
+    .sec-Electric-Intelligence .container {
+      max-width: 1320px;
+      padding: 120px 36px 180px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    .sec-Electric-Intelligence .container .h1 {
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 54.6px;
+      letter-spacing: -1.26px;
+      color: #fff;
+      margin-bottom: 80px;
+    }
+
+    .sec-Electric-Intelligence .container nav {
+      width: 100%;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+
+
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li {
+      width: 100%;
+      
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+      margin-bottom: 10px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .sec-Electric-Intelligence .container nav>ul>li>.img-box>a {
+      display:block;
       width:100%;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.img-box>a>img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      transition:all .7s ease ;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.img-box:hover>a>img{
+      transform: scale(1.08);
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+      color: #fff;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 23.8px;
+      margin-bottom: 8px;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.8px;
 
     }
   </style>
