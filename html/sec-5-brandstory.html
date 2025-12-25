@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benz-sec-brandstory</title>
+    <!-- Script Jquery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Script Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Link inner CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <main>
+        <section class="sec-brand-story">
+            <div class="container">
+                <div class="marquee marquee-1">
+                    <div><img src="../imgs/img-brandstory-marquee-1.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-2.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-3.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-4.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-5.jpg" alt="img-brandstory"></div>
+                </div>
+                <div class="content">
+                    <div class="h1">
+                        Brand Story
+                    </div>
+                    <div class="text-box">
+                        <div class="h2">
+                            The Best or Nothing
+                        </div>
+                        <p>메르세데스-벤츠는 'The Best or Nothing'이라는 철학 아래 <br>
+                            기술과 감성을 정제된 형태로 융합고 세상에 없던 주행 경험 <br>
+                            그리고 가장 완전한 럭셔리를 향해 끊임없이 진보합니다</p>
+                    </div>
+                </div>
+                <div class="marquee marquee-2">
+                    <div><img src="../imgs/img-brandstory-marquee-1.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-2.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-3.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-4.jpg" alt="img-brandstory"></div>
+                    <div><img src="../imgs/img-brandstory-marquee-5.jpg" alt="img-brandstory"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .sec-brand-story .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .sec-brand-story .container>div {
+            width: 100%;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .sec-brand-story .container>.content {
+            min-width: 800px;
+            align-self: center;
+
+        }
+
+        .sec-brand-story .container>.content .h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 96px;
+            font-weight: 700;
+            white-space: nowrap;
+            border: 1px solid red;
+            margin-bottom: 40px;
+        }
+
+        .sec-brand-story .container>.content>.text-box {
+            width: 400px;
+            border: 1px solid red;
+            margin-left: auto;
+        }
+
+        .sec-brand-story .container>.content .h2 {
+            border: 1px solid red;
+            font-family: "Playfair", serif;
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .sec-brand-story .container>.content p {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: right;
+            line-height: 1.7;
+        }
+
+        .sec-brand-story .container>.marquee {
+            max-width: 483px;
+        }
+        .sec-brand-story .container>.marquee img{
+            display:block;
+            width:100%;
+        }
+    </style>
+</body>
+
+</html>
