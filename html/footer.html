@@ -120,18 +120,32 @@
                     </ul>
                 </nav>
 
-                <div class="info-box-mo-ver">
-                    <div><span>메르세데스-벤츠 코리아㈜ 서울특별시 중구 한강대로 416 서울 스퀘어 9층 (우) 04637</span></div>
-                    <div><span>사업자 등록번호: 220-86-46545</span></div>
-                    <div><span>전화: 080-001-1886</span></div>
-                    <div><span>이메일 : mbk_cs@mercedes-benz.com</span></div>
+                <div class="content">
+                    <div class="info-box-mo-ver">
+                        <div><span>메르세데스-벤츠 코리아㈜ </span></div>
+                        <div><span>서울특별시 중구 한강대로 416 서울 스퀘어 9층 (우) 04637</span></div>
+                        <div><span>사업자 등록번호: 220-86-46545</span></div>
+                        <div><span>전화: 080-001-1886</span></div>
+                        <div><span>이메일 : mbk_cs@mercedes-benz.com</span></div>
+                    </div>
+
+                    <div class="logos-mo-ver">
+                        <div><a href="#"><img src="../imgs/icon-sns-1.png" alt="icon-btn"></a></div>
+                        <div><a href="#"><img src="../imgs/icon-sns-2.png" alt="icon-btn"></a></div>
+                        <div><a href="#"><img src="../imgs/icon-sns-3.png" alt="icon-btn"></a></div>
+                    </div>
+
+                    <div class="logo-box">
+                        <div class="img-box">
+                            <img src="../imgs/logo-footer-benz-symbol.svg" alt="img-logo">
+                        </div>
+                        <div>
+                            <span>©2025 메르세데스-벤츠 코리아(주)</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="logos-mo-ver">
-                    <div><a href="#"><img src="../imgs/icon-sns-1.png" alt="icon-btn"></a></div>
-                    <div><a href="#"><img src="../imgs/icon-sns-2.png" alt="icon-btn"></a></div>
-                    <div><a href="#"><img src="../imgs/icon-sns-3.png" alt="icon-btn"></a></div>
-                </div>
+
 
             </div>
         </div>
@@ -225,7 +239,7 @@
         footer .logo-box>.img-box {
             margin-bottom: 14px;
             width: 80px;
-            height: :80px;
+            height: 80px;
         }
 
         footer .logo-box>.img-box img {
@@ -233,6 +247,10 @@
             object-fit: cover;
         }
 
+
+        footer>.footer-mo-ver {
+            display: none;
+        }
 
         footer>.footer-mo-ver nav>ul>li {
             background-color: #1A1A1A;
@@ -297,28 +315,55 @@
             font-size: 14px;
             font-weight: 400;
         }
-        footer>.footer-mo-ver nav>ul>li>ul>li>a>span{
-            display:inline-block;
+
+        footer>.footer-mo-ver nav>ul>li>ul>li>a>span {
+            display: inline-block;
             position: relative;
         }
+
         footer>.footer-mo-ver nav>ul>li>ul>li>a>span::after {
             content: "";
-            display:block;
+            display: block;
             position: absolute;
             width: 0;
             height: 1px;
             background-color: #fff;
-            transition:all .7s ease;
-            top:110%;
-            left:0;
+            transition: all .7s ease;
+            top: 110%;
+            left: 0;
         }
 
         footer>.footer-mo-ver nav>ul>li>ul>li:hover>a>span::after {
             width: 100%;
         }
 
-        footer>.footer-mo-ver .info-box-mo-ver{
-            font-si
+        footer>.footer-mo-ver .content {
+            padding: 20px 16px;
+        }
+
+        footer>.footer-mo-ver .info-box-mo-ver {
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        footer>.footer-mo-ver .info-box-mo-ver>div {
+            margin-top: 8px;
+        }
+
+        footer>.footer-mo-ver .logos-mo-ver {
+            padding: 8px 0;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        footer>.footer-mo-ver .logos-mo-ver>div img {
+            display: block;
+        }
+
+        footer>.footer-mo-ver .logo-box {
+            display: flex;
         }
 
 
@@ -378,7 +423,20 @@
             }
         }
 
-        @media (max-width:415px) {}
+        @media (max-width:415px) {
+            footer>.footer-mo-ver {
+                display: block;
+                white-space: nowrap;
+            }
+
+            footer>.footer-mo-ver>.container{
+                min-width:310px;
+            }
+
+            footer>.footer-pc-ver {
+                display: none;
+            }
+        }
     </style>
 
     <script>
