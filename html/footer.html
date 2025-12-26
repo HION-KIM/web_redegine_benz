@@ -36,10 +36,10 @@
                     <div><a href="#"><span>Mercedes-Benz AG Privacy Statement</span></a></div>
                     <div><a href="#"><span>쿠키</span></a></div>
                 </div>
-                <div>
-                    <div><a href="#"><img src="link" alt="icon-btn"></a></div>
-                    <div><a href="#"><img src="link" alt="icon-btn"></a></div>
-                    <div><a href="#"><img src="link" alt="icon-btn"></a></div>
+                <div class="logos">
+                    <div><a href="#"><img src="../imgs/icon-sns-1.png" alt="icon-btn"></a></div>
+                    <div><a href="#"><img src="../imgs/icon-sns-2.png" alt="icon-btn"></a></div>
+                    <div><a href="#"><img src="../imgs/icon-sns-3.png" alt="icon-btn"></a></div>
                 </div>
             </div>
             <div class="terms-box">
@@ -56,7 +56,7 @@
             </div>
             <div class="logo-box">
                 <div class="img-box">
-                    <img src="link" alt="img-logo">
+                    <img src="../imgs/logo-footer-benz-symbol.svg" alt="img-logo">
                 </div>
                 <div>
                     <span>©2025 메르세데스-벤츠 코리아(주)</span>
@@ -64,6 +64,72 @@
             </div>
         </div>
     </footer>
+
+
+    <style>
+        footer>.container {
+            padding: 40px 100px;
+        }
+
+        footer .container>div {
+            display:flex;
+            flex-wrap: wrap;
+            padding: 8px 0;
+            row-gap: 8px;
+        }
+
+        footer .policy-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16;
+            font-weight: 600;
+        }
+
+        footer .policy-box>div:first-child{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 28px;
+        }
+
+        footer .policy-box .logos>div {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-left: 32px;
+        }
+
+        footer .policy-box .logos img {
+            display: block;
+            object-fit: cover;
+        }
+
+        footer .terms-box>div,
+        footer .info-box>div {
+            display: inline-block;
+            margin-right: 44px;
+            font-size: 16px;
+            font-weight: 500;            
+            flex-shrink: 0;
+
+        }
+        footer .info-box>div {
+            margin-right: 32px;
+        }
+
+        footer .logo-box{
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            margin-top:40px;
+            font-size:16px;
+            font-weight: 500;
+        }
+
+        footer .logo-box > .img-box{
+            margin-bottom:14px;
+        }
+    </style>
 </body>
 
 </html>
