@@ -21,12 +21,11 @@
   <header>
     <div class="container">
       <div class="header_inner">
-
         <div class="logo_box">
           <a href="#"><img src="../imgs/benz_log.svg" alt=""></a>
         </div>
         <nav class="menu_box">
-          <ul class="accordion">
+          <ul>
             <li><a href="#"><span>Models</span></a></li>
             <li><a href="#"><span>Buy</span></a></li>
             <li><a href="#"><span>Services</span></a></li>
@@ -42,12 +41,18 @@
             <div><img src="../imgs/search_icon_header.png" alt="error"></div>
           </div>
         </div>
+
+        <div class="hamberger-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
 
       <div class="side_menu_box">
         <div class="side_menu_bar">
           <nav class="menu_1">
-            <ul class="accordion">
+            <ul>
               <li><a href="#">All Models</a></li>
               <li><a href="#">전기 자동차</a></li>
               <li><a href="#">플러그인 하이브리드</a></li>
@@ -112,7 +117,7 @@
             </div>
           </nav>
           <nav class="menu_2">
-            <ul class="accordion">
+            <ul>
               <li><a href="#">메르세데스-벤츠 스토어</a></li>
               <li><a href="#">온라인 라이브 상담</a></li>
               <li><a href="#">인증 중고차 스토어</a></li>
@@ -132,7 +137,7 @@
             </ul>
           </nav>
           <nav class="menu_3">
-            <ul class="accordion">
+            <ul>
               <li><a href="#">All Services</a></li>
               <li><a href="#">충전 및 디지털 서비스</a></li>
               <li><a href="#">온라인 서비스 예약</a></li>
@@ -153,7 +158,7 @@
             </ul>
           </nav>
           <nav class="menu_4">
-            <ul class="accordion">
+            <ul>
               <li><a href="#">About Mercedes-Benz</a>
                 <ul>
                   <li><a href="#">히스토리 & 브랜드</a></li>
@@ -352,6 +357,60 @@
       display: block;
     }
 
+    header .header_inner .hamberger-btn {
+      display: none;
+      justify-content: center;
+      flex-direction: column;
+      width: 32px;
+      height: 32px;
+      position: relative;
+    }
+
+    header .header_inner .hamberger-btn>div {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition:all .4s ease;
+      position: absolute;
+      top:10%;
+      left:0;
+
+    }
+
+    header .hamberger-btn>div:nth-child(2) {
+      width: 66%;
+      top:50%;
+    }
+
+    header .hamberger-btn>div:nth-child(3) {
+      width: 66%;
+      align-self: flex-end;
+      height: 4px;
+      top:90%;
+      left:auto;
+      right:0;
+    }
+
+    header .hamberger-btn.active>div:nth-child(1) {
+      transform: rotate(45deg) translateY(-50%);
+      position: absolute;
+      top: 50%;
+    }
+
+    header .hamberger-btn.active>div:nth-child(2) {
+      width:0;
+    }
+
+    header .hamberger-btn.active>div:nth-child(3) {
+      transform: rotate(-45deg) translateY(-50%);
+      position: absolute;
+      top: 50%;
+      width:100%;
+      height: 2px;
+    }
+
+
+
     header .side_menu_box {
       position: absolute;
       left: 0;
@@ -425,7 +484,7 @@
       transition: padding .7s;
     }
 
-    .side_menu_box .side_menu_bar nav ul>li.active>a {
+    .side_menu_box .side_menu_bar nav>ul>li.active>a {
       background-color: #1A1A1A;
       padding-left: 20px;
       border-radius: 4px;
@@ -629,15 +688,30 @@
       box-shadow: 0 0 5px #fff;
     }
 
+    @media (max-width:1241px) {
+      header .header_inner>.menu_box {
+        display: none;
+      }
 
+      header .header_inner>.util_box {
+        display: none;
+      }
 
-    @media (max-width:1241px) {}
+      header .header_inner {
+        justify-content: space-between;
+      }
+
+      header .header_inner>.hamberger-btn {
+        display: flex;
+      }
+
+    }
   </style>
 
   <script>
     AOS.init();
 
-    function menuEvent() {
+    function headerMenuEvent() {
       $('.menu_box>ul>li').mouseenter(function () {
         $('.menu_box>ul').addClass('active');
         $(this).siblings().removeClass('active');
@@ -664,55 +738,40 @@
         $(".side_menu_bar>nav").siblings().removeClass('active');
         $(".side_menu_bar>nav").eq($index).addClass('active');
       });
+
+      $('.side_menu_bar ul>li').mouseover(function () {
+        let $this = $(this);
+        $this.addClass('active');
+        $this.siblings().removeClass('active');
+      });
+
+      $('.side_menu_box').click(function () {
+        $(this).removeClass('active');
+        $('.menu_box>ul').removeClass('active');
+        $('.menu_box>ul>li').removeClass('active');
+      });
+
+      $('.side_menu_bar').click(function () {
+        e.stopPropagation();
+      });
+    }
+
+    function searchBoradInit() {
+      $('.search_icon').click(function () {
+        $('.search_board').addClass('active');
+        $('.search_board .img_box > .filter').addClass('active');
+      });
+
+      $('.search_board .closed_box').click(function () {
+        $('.search_board').removeClass('active');
+        $('.search_board .img_box > .filter').removeClass('active');
+      });
     }
 
 
+    headerMenuEvent();
 
-
-    // $('.side_menu_bar .accordion > *').mouseover(function () {
-    //   let $this = $(this);
-    //   $this.parent().children().removeClass('active');
-    //   $this.addClass('active');
-    // });
-
-
-
-
-    //   $('.header_inner').mouseover(function () {
-    //     $('.menu_box>ul').removeClass('active');
-    //     $('.side_menu_box').removeClass('active');
-    //     $('.accordion > *').removeClass('active');
-    //   });
-
-
-
-
-    //   $('.side_menu_box').click(function () {
-    //     $('.menu_box>ul').removeClass('active');
-    //     $('.side_menu_box').removeClass('active');
-    //     $('.accordion > *').removeClass('active');
-    //   });
-
-    //   $('.side_menu_bar').click(function () {
-    //     return false;
-    //   });
-
-    // }
-    // function SearchIconEvent() {
-    //   $('.search_icon').click(function () {
-    //     $('.search_board').addClass('active');
-    //     $('.search_board .img_box > .filter').addClass('active');
-    //   });
-
-    //   $('.search_board .closed_box').click(function () {
-    //     $('.search_board').removeClass('active');
-    //     $('.search_board .img_box > .filter').removeClass('active');
-    //   });
-    // }
-
-
-    menuEvent();
-    SearchIconEvent();
+    searchBoradInit();
   </script>
 </body>
 
