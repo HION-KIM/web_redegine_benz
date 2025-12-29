@@ -30,7 +30,7 @@
                   <span>Mercedes-Benz</span>
                 </div>
                 <div class="h1 prata-regular">
-                  <span>The new EQE SUV</span>
+                  <span>The New EQE SUV</span>
                 </div>
               </div>
               <div class="button">
@@ -328,6 +328,7 @@
       width: 100vw;
       height: calc(100vh - 100px);
       white-space: nowrap;
+      min-width:310px;
     }
 
     .banners .swiper-slide {
@@ -378,9 +379,9 @@
 
     .banners .content .button>div {
       display: inline-block;
-      margin-left: 52px;
       font-size: 16px;
       font-weight: 600;
+      margin-right: 40px;
     }
 
     .banners .content .button>div>a {
@@ -496,6 +497,89 @@
     }
 
     /* ---------- Swiper Pagination Custom End ---------- */
+
+    @media (max-width:1240px) {
+      .banners {
+        height: calc(100vh - 80px);
+      }
+    }
+
+    @media (max-width:768px) {
+
+      .banners {
+        height: calc(100vh - 60px);
+      }
+
+      .banners .swiper-slide {
+        padding-top: 10vh;
+      }
+
+      .banners .content {
+        max-width: 650px;
+        justify-content: flex-start;
+      }
+
+      .banners .content .text-box>.brand-name {
+        font-size: 18px;
+      }
+
+      .banners .content .text-box .h1 {
+        font-size: 60px;
+        white-space: wrap;
+        height: 164px;
+      }
+
+      .banners .content .button {
+        margin-top: 20px;
+      }
+
+      .banners .content .button>div {
+        font-size: 16px;
+      }
+
+      .banners .content .button>div img {
+        width: 22px;
+        height: 22px;
+      }
+
+      .banners .swiper-pagination {
+        gap: 8px;
+      }
+
+      .banners .swiper-pagination>.swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    @media (max-width:414px) {
+      .banners .content {
+        padding: 0 10px;
+      }
+
+      .banners .content .text-box .h1 {
+        font-size: 50px;
+        height: 140px;
+      }
+
+      .banners .content .button>div {
+        font-size: 14px;
+      }
+
+      .banners .swiper-pagination>.swiper-pagination-bullet {
+        width: 6x;
+        height: 6px;
+      }
+
+      .banners .swiper-pagination {
+        gap: 4px;
+      }
+
+      .banners .swiper-pagination>.swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
   </style>
 
   <script>
