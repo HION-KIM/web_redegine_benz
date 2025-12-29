@@ -965,9 +965,46 @@
   }
 
   /* --------- Product-swiper Custom End ---------- */
+
+
+  @media (max-width:1240px) {
+    .sec-product>.container {
+      max-width: 1000px;
+      padding: 0 36px;
+    }
+
+    .sec-product .h1 {
+      font-size: 38px;
+    }
+
+    .sec-product .drop-box>.select-btn {
+      padding: 8px 0;
+    }
+
+    .sec-product .drop-box>.select-btn>span {
+      font-size: 14px;
+    }
+
+    .sec-product .drop-box>ul>li {
+      padding: 14px;
+      cursor: pointer;
+    }
+
+    .sec-product .Product-swiper .swiper-slide {
+      min-width: auto;
+    }
+  }
+
+  @media (max-width:768px) {
+    .sec-product>.container {
+      max-width: 650px;
+      padding: 0 20px;
+    }
+  }
 </style>
 
 <script>
+
   var swiper = new Swiper(".Product-swiper", {
     loop: true,
     speed: 500,
@@ -978,6 +1015,27 @@
       el: ".Product-swiper>.swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      415: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+      },
+      769: {
+        spaceBetween: 40,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1241: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 40,
+      },
+    }
   });
 
   function CategorySelect() {
