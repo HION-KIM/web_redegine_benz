@@ -87,7 +87,6 @@
         .sec-contents .container .content>ul {
             display: flex;
             gap: 40px;
-            justify-content: space-between;
             height: 382px;
         }
 
@@ -125,7 +124,7 @@
             flex-grow: 1;
         }
 
-        .sec-contents .content .button a{
+        .sec-contents .content .button a {
             display: flex;
             align-items: center;
         }
@@ -151,7 +150,6 @@
         .sec-contents .content .button img {
             display: block;
             transition: all .7s ease;
-
         }
 
         .sec-contents .content .button:hover img {
@@ -167,6 +165,95 @@
             display: block;
             width: 100%;
             transform: scale(1.01);
+        }
+
+        @media (max-width:1240px) and (min-width:769px) {
+            .sec-contents .container {
+                max-width: 1000px;
+                box-sizing: border-box;
+                padding: 100px 36px 80px;
+                margin: 0 auto;
+            }
+
+            .sec-contents .h1 {
+                font-size: 38px;
+                margin-bottom: 60px;
+            }
+
+            .sec-contents .container .content>ul {
+                gap: 28px;
+                height: 320px;
+            }
+
+            .sec-contents .content span {
+                font-size: 16px;
+            }
+
+            .sec-contents .content p {
+                font-size: 14px;
+                margin-top: 16px;
+            }
+
+            .sec-contents .content .button span {
+                font-size: 14px;
+            }
+
+            .sec-contents .content .button img {
+                display: block;
+                transition: all .7s ease;
+                width: 20px;
+            }
+        }
+
+        @media (max-width:768px) and (min-width:415px) {
+
+            .sec-contents .container {
+                max-width: 650px;
+                box-sizing: border-box;
+                padding: 100px 20px 80px;
+                margin: 0 auto;
+            }
+
+            .sec-contents .container .content>ul {
+                flex-direction: column;
+                gap: 28px;
+                height: auto;
+            }
+
+            .sec-contents .container .content>ul>li {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .sec-contents .content .img-box {
+                margin-bottom: 0;
+                max-height: 141px;
+                max-width: 220px;
+                flex-grow: 1;
+            }
+
+            .sec-contents .content .img-box img {
+                transform: scale(1.01);
+            }
+
+            .sec-contents .content .text-box{
+                min-width:200px;
+            }
+            .sec-contents .content span {
+                font-size: 16px;
+            }
+
+            .sec-contents .content p {
+                font-size: 14px;
+                margin-top: 16px;
+            }
+
+            .sec-contents .content .button span {
+                font-size: 14px;
+            }
+
         }
     </style>
 </body>
