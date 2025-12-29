@@ -60,13 +60,17 @@
                                 <p>메르세데스-벤츠는 'The Best or Nothing'이라는 철학 아래 <br>
                                     기술과 감성을 정제된 형태로 융합고 세상에 없던 주행 경험 <br>
                                     그리고 가장 완전한 럭셔리를 향해 끊임없이 진보합니다</p>
+                                <p>메르세데스-벤츠는 'The Best or Nothing'이라는 철학 아래
+                                    기술과 감성을 정제된 형태로 융합고 세상에 없던 주행 경험
+                                    그리고 가장 완전한 럭셔리를 향해 끊임없이 진보합니다</p>
                             </div>
                             <div class="text-box text-box-2">
                                 <div class="h2">
-                                    Innovation<br>
+                                    Innovation
                                     Defines Legacy
                                 </div>
                                 <p>메르세데스-벤츠는 최초의 자동차를 만든 전통 위에,<br>지속적인 기술 혁신을 통해 럭셔리 모빌리티의 기준을 확립합니다.</p>
+                                <p>메르세데스-벤츠는 최초의 자동차를 만든 전통 위에, 지속적인 기술 혁신을 통해 럭셔리 모빌리티의 기준을 확립합니다.</p>
                             </div>
                             <div class="text-box text-box-3">
                                 <div class="h2">
@@ -74,6 +78,7 @@
                                     Driven by Excellence
                                 </div>
                                 <p>완벽을 향한 정밀한 엔지니어링과 최고를 향한 끊임없는 노력으로,<br>벤츠는 세계적 신뢰와 가치를 이어갑니다.</p>
+                                <p>완벽을 향한 정밀한 엔지니어링과 최고를 향한 끊임없는 노력으로, 벤츠는 세계적 신뢰와 가치를 이어갑니다.</p>
                             </div>
                             <div class="text-box text-box-4">
                                 <div class="h2">
@@ -81,6 +86,7 @@
                                     Meets Innovation
                                 </div>
                                 <p>메세심하게 설계된 럭셔리와 최첨단 기술이 결합된 주행 경험을 통해,<br> 벤츠는 모빌리티의 미래를 선도합니다.</p>
+                                <p>메세심하게 설계된 럭셔리와 최첨단 기술이 결합된 주행 경험을 통해, 벤츠는 모빌리티의 미래를 선도합니다.</p>
                             </div>
                         </div>
                     </div>
@@ -112,13 +118,13 @@
 
     <style>
         .test {
-            width: 100vw;
+            width: 100%;
             height: 500px;
             font-size: 50px;
         }
 
         .sec-brand-story .container {
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             display: flex;
         }
@@ -131,7 +137,6 @@
         .sec-brand-story .container>.content {
             min-width: 800px;
             align-self: center;
-
         }
 
         .sec-brand-story .container>.content>div {
@@ -159,7 +164,6 @@
             position: absolute;
             top: 0;
             right: 0;
-
         }
 
         .sec-brand-story .container>.content .h2 {
@@ -171,11 +175,15 @@
             text-align: right;
         }
 
-        .sec-brand-story .container>.content p {
+        .sec-brand-story .container>.content p:nth-child(2) {
             font-size: 16px;
             font-weight: 400;
             text-align: right;
             line-height: 1.7;
+        }
+
+        .sec-brand-story .container>.content p:nth-child(3) {
+            display: none
         }
 
         .sec-brand-story .container>.marquee {
@@ -209,51 +217,249 @@
             display: block;
             width: 100%;
         }
+
+        @media (max-width:1240px) {
+            .sec-brand-story .container>.content {
+                min-width: 600px;
+            }
+
+            .sec-brand-story .container>.content>div {
+                max-width: 600px;
+                padding: 0 80px;
+            }
+
+
+            .sec-brand-story .container>.content .h1 {
+                font-size: 70px;
+                margin-bottom: 40px;
+            }
+
+            .sec-brand-story .container>.content .h2 {
+                font-size: 38px;
+                margin-bottom: 18px;
+                line-height: auto;
+            }
+
+            .sec-brand-story .container>.content p:nth-child(2) {
+                font-size: 14px;
+                line-height: 23.8px;
+            }
+
+            .sec-brand-story .container>.content .text-box-wrap {
+                width: 400px;
+                height: 180px;
+            }
+
+            .sec-brand-story .container>.marquee-1 {
+                display: none;
+            }
+
+            .sec-brand-story .container>.marquee {
+                max-width: 350px;
+            }
+
+            .sec-brand-story .container>.marquee-2>div>div {
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width:768px) and (min-width:415px) {
+            .sec-brand-story .container {
+                height: auto;
+            }
+
+            .sec-brand-story .container>.content {
+                min-width: 414px;
+                width: 100%;
+            }
+
+            .sec-brand-story .container>.content>div {
+                width: 100%;
+                max-width: 650px;
+                margin: 0 auto;
+                padding: 60px 20px;
+            }
+
+
+            .sec-brand-story .container>.content .h1 {
+                font-size: 54px;
+                margin-bottom: 60px;
+
+            }
+
+            .sec-brand-story .container>.content .h2 {
+                font-size: 26px;
+                margin-bottom: 0;
+                line-height: auto;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .sec-brand-story .container>.content .h2::after {
+                content: "+";
+                display: block;
+                width: 18px;
+            }
+
+            .sec-brand-story .container>.content .h2.active::after {
+                content: "-";
+                display: block;
+                width: 18px;
+            }
+
+
+
+            .sec-brand-story .container>.marquee-2 {
+                display: none;
+            }
+
+            .sec-brand-story .container>.content .text-box-wrap {
+                width: 100%;
+                height: auto;
+                position: relative;
+                margin-left: auto;
+            }
+
+            .sec-brand-story .container>.content .text-box-wrap>.text-box {
+                position: static;
+                border-top: 1px solid #fff;
+                padding: 20px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .sec-brand-story .container>.content p:nth-child(2) {
+                display: none;
+            }
+
+            .sec-brand-story .container>.content p:nth-child(3) {
+                font-size: 16px;
+                line-height: 23.8px;
+                text-align: justify;
+                padding-left: 80px;
+                display: none;
+                width: 100%;
+                white-space: wrap;
+                box-sizing: border-box;
+                margin-top: 18px;
+            }
+
+            .sec-brand-story .container>.content .text-box:last-child {
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        @media (max-width:414px) {
+            .sec-brand-story .container {
+                height: auto;
+            }
+
+            .sec-brand-story .container>.content {
+                min-width: 310px;
+                width: 100%;
+            }
+
+            .sec-brand-story .container>.content>div {
+                width: 100%;
+                max-width: 650px;
+                padding: 60px 16px;
+            }
+
+            .sec-brand-story .container>.content .h1 {
+                font-size: 48px;
+                margin-bottom: 16px;
+                line-height: 90px;
+
+            }
+
+            .sec-brand-story .container>.content .h2 {
+                font-size: 26px;
+                margin-bottom: 0;
+                line-height: auto;
+                text-align: right;
+            }
+
+
+            .sec-brand-story .container>.content .text-box:not(:nth-child(1)) {
+                display: none;
+            }
+
+            .sec-brand-story .container>.content p:nth-child(2) {
+                display: none;
+            }
+
+            .sec-brand-story .container>.marquee {
+                display: none;
+            }
+
+            .sec-brand-story .container>.content .text-box-wrap {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                margin-left: auto;
+            }
+
+            .sec-brand-story .container>.content .text-box-wrap>.text-box {
+                position: static;
+                width: 100%;
+            }
+        }
     </style>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        function brandStoryScroll() {
+        ScrollTrigger.matchMedia({
+            "(min-width: 769px)": function () {
+                var scrollTime = 7000;
 
-            var scrollTime = 10000;
+                var tl = gsap.timeline();
 
-            var tl = gsap.timeline();
+                tl.from(".marquee-img-wrap-1", { yPercent: -110 }, 0)
+                    .from('.marquee-img-wrap-2', { yPercent: +110 }, 0);
 
-            tl.from(".marquee-img-wrap-1", { yPercent: -110 }, 0)
-                .from('.marquee-img-wrap-2', { yPercent: +110 }, 0);
+                ScrollTrigger.create({
+                    animation: tl,
+                    trigger: ".sec-brand-story",
+                    start: "top top",
+                    end: "+=" + scrollTime,
+                    scrub: true,
+                    pin: true,
+                    anticipatePin: 1,
+                    // markers: true,
+                });
 
-            ScrollTrigger.create({
-                animation: tl,
-                trigger: ".sec-brand-story",
-                start: "top top",
-                end: "+=" + scrollTime,
-                scrub: true,
-                pin: true,
-                anticipatePin: 1,
-                // markers: true,
-            });
+                gsap.set(".text-box", { opacity: 0 });
+                gsap.set(".text-box-1", { opacity: 1 });
 
-            gsap.set(".text-box", { opacity: 0 });
-            gsap.set(".text-box-1", { opacity: 1 });
+                var opa = gsap.timeline();
+                opa.to(".text-box-1", { opacity: 0 })
+                    .to(".text-box-2", { opacity: 1 })
+                    .to(".text-box-2", { opacity: 0 })
+                    .to(".text-box-3", { opacity: 1 });
 
-            var opa = gsap.timeline();
-            opa.to(".text-box-1", { opacity: 0 })
-                .to(".text-box-2", { opacity: 1 })
-                .to(".text-box-2", { opacity: 0 })
-                .to(".text-box-3", { opacity: 1 });
+                ScrollTrigger.create({
+                    animation: opa,
+                    trigger: ".sec-brand-story",
+                    start: "top top",
+                    end: "+=" + scrollTime,
+                    scrub: true,
+                    markers: true,
+                });
+            }
+        });
 
-            ScrollTrigger.create({
-                animation: opa,
-                trigger: ".sec-brand-story",
-                start: "top top",
-                end: "+=" + scrollTime,
-                scrub: true,
-                markers: true,
+        function toggleSlide() {
+            $('.sec-brand-story .text-box-wrap>.text-box>.h2').click(function () {
+                if ($(window).width() >= 415 && $(window).width() <= 767)
+                    $(this).toggleClass('active').parent().find('p:nth-child(3)').slideToggle();
             });
         }
 
-        brandStoryScroll();
+        toggleSlide();
     </script>
 </body>
 
