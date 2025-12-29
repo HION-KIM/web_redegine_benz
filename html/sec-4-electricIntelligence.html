@@ -39,6 +39,7 @@
                 <span>편리한 충전</span>
                 <p>Mercedes me Charge 멤버십 카드 한 장으로 전국 대부분의 공용 충전소에서 편리하게 충전할 수 있습니다.</p>
               </div>
+              <div class="btn-box"><a href="#"><span>더보기</span></a></div>
             </li>
             <li>
               <div class="img-box">
@@ -50,6 +51,7 @@
                 <span>스마트 보조 장치 시스템</span>
                 <p>벤츠 전기차는 효율적인 주행 모드와 회생 제동을 통해 주행 가능 거리를 늘려, 목적지까지 편안한 이동을 지원합니다</p>
               </div>
+              <div class="btn-box"><a href="#"><span>더보기</span></a></div>
             </li>
             <li>
               <div class="img-box">
@@ -61,6 +63,7 @@
                 <span>정교한 구동 시스템</span>
                 <p>메르세데스-벤츠 전기차만의 정교한 구동 시스템으로, 조용하면서도 강력한 전동 퍼포먼스를 직접 경험해보세요.</p>
               </div>
+              <div class="btn-box"><a href="#"><span>더보기</span></a></div>
             </li>
           </ul>
         </nav>
@@ -69,6 +72,10 @@
   </main>
 
   <style>
+
+    .sec-Electric-Intelligence {
+      min-width: 310px;
+    }
     .sec-Electric-Intelligence .Electric-banner {
       width: 100%;
     }
@@ -104,17 +111,17 @@
       display: flex;
       justify-content: space-between;
       gap: 40px;
-
-
     }
 
     .sec-Electric-Intelligence .container nav>ul>li {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
     }
 
     .sec-Electric-Intelligence .container nav>ul>li>.img-box {
-      margin-bottom: 10px;
       width: 100%;
       overflow: hidden;
     }
@@ -152,6 +159,125 @@
       font-weight: 400;
       line-height: 23.8px;
       text-align: justify;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
+      display: none;
+      border:1px solid #fff;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.btn-box>a {
+      padding: 8px 10px;
+      width: 100%;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .sec-Electric-Intelligence .container nav>ul>li>.btn-box>a>span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+
+
+    @media (max-width:1240px) {
+
+      .sec-Electric-Intelligence .container {
+        max-width: 1000px;
+        padding: 60px 36px;
+      }
+
+      .sec-Electric-Intelligence .container .h1 {
+        font-size: 38px;
+        margin-bottom: 60px;
+      }
+
+
+
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+        font-size: 18px;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sec-Electric-Intelligence .container {
+        max-width: 650px;
+        padding: 40px 20px;
+      }
+
+      .sec-Electric-Intelligence .container .h1 {
+        font-size: 28px;
+        margin-bottom: 40px;
+        line-height: 40px;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul {
+        gap: 20px;
+        flex-direction: column;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li {
+        gap: 24px;
+        flex-direction: row;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+        max-width: 186px;
+        flex-grow: 1;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+        display: inline-block;
+        color: #fff;
+        padding: 16px 0;
+        min-width: 240px;
+      }
+
+      @media (max-width:414px) {
+        .sec-Electric-Intelligence .container {
+          padding: 40px 16px;
+        }
+
+        .sec-Electric-Intelligence .container .h1 {
+          font-size: 20px;
+          margin-bottom: 32px;
+          line-height: 24px;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul {
+          gap: 40px;
+          flex-direction: column;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul>li {
+          gap: 12px;
+          flex-direction: column;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+          max-width: none;
+          width: 100%;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+          color: #fff;
+          padding: 0px 0;
+          min-width: none;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+          margin-bottom: 4px;
+        }
+
+        .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
+          display: block;
+        }
+      }
 
     }
   </style>
