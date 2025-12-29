@@ -80,10 +80,12 @@
     .sec-navi {
       padding: 125px 0;
       white-space: nowrap;
+      min-width: 310px;
     }
 
     .sec-navi .container {
       max-width: 1320px;
+
       box-sizing: border-box;
       padding: 0 32px;
       margin: 0 auto;
@@ -93,8 +95,7 @@
       display: flex;
       justify-content: space-between;
       gap: 32px;
-
-
+      flex-wrap: wrap;
     }
 
     .sec-navi ul>li {
@@ -119,9 +120,14 @@
       position: relative;
     }
 
+    .sec-navi ul>li .img-box {
+      width: 60px;
+    }
+
     .sec-navi ul>li img {
       display: block;
       transition: all .7s ease;
+      width: 100%;
     }
 
     .sec-navi ul>li:hover img {
@@ -138,11 +144,71 @@
       width: 0%;
       height: 1px;
       background-color: #fff;
-      transition:all .7s ease;
+      transition: all .7s ease;
     }
 
     .sec-navi ul>li:hover .text::after {
       width: 100%;
+    }
+
+    @media (max-width:1240px) {
+
+      .sec-navi {
+        padding: 100px 0;
+      }
+
+      .sec-navi .container {
+        max-width: 1000px;
+      }
+
+      .sec-navi ul {
+        gap: 16px;
+      }
+
+      .sec-navi ul>li>a {
+        height: 136px;
+      }
+
+      .sec-navi ul>li .img-box {
+        width: 52px;
+      }
+
+      .sec-navi ul>li .text {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width:768px) {
+
+      .sec-navi {
+        padding: 60px 0;
+      }
+
+      .sec-navi .container {
+        padding: 0 20px;
+        max-width: 650px;
+      }
+
+      .sec-navi ul>li {
+        width: calc(100% / 4);
+      }
+    }
+
+    @media (max-width:414px) {
+      .sec-navi .container {
+        padding: 0 16px;
+        max-width: 650px;
+      }
+
+      .sec-navi ul>li .img-box {
+        width: 38px;
+      }
+
+
+      .sec-navi ul>li>a {
+        height: 110px;
+        padding: 20px 0;
+      }
     }
   </style>
 
