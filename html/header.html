@@ -560,6 +560,7 @@
       position: fixed;
       width: 100vw;
       background-color: #000;
+      z-index: 1111111;
     }
 
     header>.container {
@@ -680,6 +681,7 @@
       width: 32px;
       height: 32px;
       position: relative;
+      z-index: 11111111;
     }
 
     header .header_inner .hamberger-btn>div {
@@ -1011,17 +1013,14 @@
       position: absolute;
       top: -100vh;
       left: 0;
-      z-index: -1;
+      z-index: 1111;
       box-sizing: border-box;
       padding: 4.21vh 11.29vw;
       visibility: hidden;
       transition: all .7s ease;
     }
 
-    header .hamberger-box.active {
-      visibility: visible;
-      top: 0;
-    }
+
 
 
     header .hamberger-box::-webkit-scrollbar {
@@ -1182,7 +1181,7 @@
     header .hamberger-box .menu-box-mo-ver {
       width: 100%;
       margin-bottom: 40px;
-      display: block;
+      display: none;
     }
 
     header .hamberger-box .menu-box-mo-ver>ul {
@@ -1238,10 +1237,6 @@
         height: 80px;
       }
 
-      header .header_inner>.logo_box.active {
-        visibility: hidden;
-      }
-
       header .header_inner>.menu_box {
         display: none;
       }
@@ -1256,6 +1251,11 @@
 
       header .header_inner>.hamberger-btn {
         display: flex;
+      }
+
+      header .hamberger-box.active {
+        visibility: visible;
+        top: 0;
       }
     }
 
@@ -1302,9 +1302,17 @@
         overflow-y: auto;
       }
 
+      header .hamberger-box.active {
+        visibility: visible;
+        top: 0;
+      }
 
       header .hamberger-box .menu-box {
         display: none;
+      }
+
+      header .hamberger-box .menu-box-mo-ver {
+        display: block;
       }
 
       header .hamberger-box>div:nth-child(5) {
@@ -1366,6 +1374,12 @@
       header .hamberger-box {
         padding: 68px 0;
         min-width: 310px;
+        overflow-y: auto;
+      }
+
+      header .hamberger-box.active {
+        visibility: visible;
+        top: 0;
       }
 
       header .hamberger-box .menu-box {
@@ -1394,13 +1408,12 @@
         padding: 0 10px;
       }
 
-      header .hamberger-box .menu-box>ul>li {
-        font-size: 20px;
+      header .hamberger-box>div:nth-child(5) {
+        padding: 0 10px;
       }
 
-      header .hamberger-box .menu-box>ul ul li {
-        font-size: 14px;
-        padding: 8px 20px;
+      header .hamberger-box>div:nth-child(6) {
+        padding: 0 10px;
       }
     }
   </style>
