@@ -232,14 +232,14 @@ function MainSection5BrandStoyuInit() {
                 // markers: true,
             });
 
-            gsap.set(".text-box", { opacity: 0 });
-            gsap.set(".text-box-1", { opacity: 1 });
+            gsap.set(".sec-brand-story .text-box", { opacity: 0 });
+            gsap.set(".sec-brand-story .text-box-1", { opacity: 1 });
 
             var opa = gsap.timeline();
-            opa.to(".text-box-1", { opacity: 0 })
-                .to(".text-box-2", { opacity: 1 })
-                .to(".text-box-2", { opacity: 0 })
-                .to(".text-box-3", { opacity: 1 });
+            opa.to(".sec-brand-story .text-box-1", { opacity: 0 })
+                .to(".sec-brand-story .text-box-2", { opacity: 1 })
+                .to(".sec-brand-story .text-box-2", { opacity: 0 })
+                .to(".sec-brand-story .text-box-3", { opacity: 1 });
 
             ScrollTrigger.create({
                 animation: opa,
@@ -263,9 +263,18 @@ function MainSection5BrandStoyuInit() {
 
 }
 
+function FooterInit() {
+    $('.arcodian_menu >ul > li:not(:last-child)').click(function () {
+        var $this = $(this);
+
+        $this.toggleClass('active').children('ul').slideToggle();
+    });
+}
+
 
 AOS.init();
 HeaderEventInit();
 MainSection1BannerInit();
 MainSection2ProductInit();
 MainSection5BrandStoyuInit();
+FooterInit();
