@@ -164,6 +164,8 @@
         .sec-contents .content .img-box img {
             display: block;
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             transform: scale(1.01);
         }
 
@@ -214,6 +216,11 @@
                 margin: 0 auto;
             }
 
+            .sec-contents .h1 {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
             .sec-contents .container .content>ul {
                 flex-direction: column;
                 gap: 28px;
@@ -229,18 +236,9 @@
 
             .sec-contents .content .img-box {
                 margin-bottom: 0;
-                max-height: 141px;
-                max-width: 220px;
-                flex-grow: 1;
+                flex: 0 0 40%;
             }
 
-            .sec-contents .content .img-box img {
-                transform: scale(1.01);
-            }
-
-            .sec-contents .content .text-box{
-                min-width:200px;
-            }
             .sec-contents .content span {
                 font-size: 16px;
             }
@@ -254,6 +252,44 @@
                 font-size: 14px;
             }
 
+        }
+
+        @media (max-width:415px) {
+            .sec-contents .container {
+                max-width: auto;
+                min-width: 310px;
+                padding: 100px 16px 80px;
+            }
+
+
+            .sec-contents .h1 {
+                font-size: 28px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .sec-contents .container .content>ul {
+                flex-direction: column;
+                gap: 28px;
+                height: auto;
+            }
+
+            .sec-contents .content .img-box {
+                margin-bottom: 16px;
+            }
+
+            .sec-contents .content span {
+                font-size: 18px;
+            }
+
+            .sec-contents .content p {
+                font-size: 14px;
+                margin: 8px 0;
+            }
+
+            .sec-contents .content .button span {
+                font-size: 14px;
+            }
         }
     </style>
 </body>
