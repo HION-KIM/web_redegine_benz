@@ -1093,6 +1093,78 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
 /* ---------- Main Section 3 Navi Start ---------- */
+.sec-navi {
+  padding: 125px 0;
+  white-space: nowrap;
+  min-width: 310px;
+}
+
+.sec-navi .container {
+  max-width: 1320px;
+  box-sizing: border-box;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.sec-navi ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.sec-navi ul>li {
+  flex-grow: 1;
+}
+
+.sec-navi ul>li>a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 158px;
+  padding: 28px 0 24px 0;
+  box-sizing: border-box;
+}
+
+.sec-navi ul>li .text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.sec-navi ul>li .img-box {
+  width: 60px;
+}
+
+.sec-navi ul>li img {
+  display: block;
+  transition: all .7s ease;
+  width: 100%;
+}
+
+.sec-navi ul>li:hover img {
+  transform: translateY(-10%);
+}
+
+.sec-navi ul>li .text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  transition: all .7s ease;
+}
+
+.sec-navi ul>li:hover .text::after {
+  width: 100%;
+}
+
 /* ---------- Main Section 3 Navi End ---------- */
 
 
@@ -1216,6 +1288,30 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 3 Navi Start ---------- */
+  .sec-navi {
+    padding: 100px 0;
+  }
+
+  .sec-navi .container {
+    max-width: 1000px;
+  }
+
+  .sec-navi ul {
+    gap: 16px;
+  }
+
+  .sec-navi ul>li>a {
+    height: 136px;
+  }
+
+  .sec-navi ul>li .img-box {
+    width: 52px;
+  }
+
+  .sec-navi ul>li .text {
+    font-size: 14px;
+  }
+
   /* ---------- Main Section 3 Navi End ---------- */
 
 
@@ -1442,42 +1538,72 @@ swiper-horizontal>.swiper-pagination-bullets,
     width: 10px;
     height: 10px;
   }
+
+  /* ---------- Main Section 2 Product End ---------- */
+
+
+
+
+  /* ---------- Main Section 3 Navi Start ---------- */
+  .sec-navi {
+    padding: 60px 0;
+  }
+
+  .sec-navi .container {
+    padding: 0 20px;
+    max-width: 650px;
+  }
+
+  .sec-navi ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .sec-navi ul>li {
+    width: calc(100% / 4);
+  }
+
+  .sec-navi ul>li>a {
+    height: 136px;
+  }
+
+  .sec-navi ul>li .img-box {
+    width: 52px;
+  }
+
+  .sec-navi ul>li .text {
+    font-size: 14px;
+  }
+
+  /* ---------- Main Section 3 Navi End ---------- */
+
+
+
+
+  /* ---------- Main Section 4 ElectricCar Start ---------- */
+  /* ---------- Main Section 4 ElectricCar End ---------- */
+
+
+
+
+  /* ---------- Main Section 5 BrandStory Start ---------- */
+  /* ---------- Main Section 5 BrandStory End ---------- */
+
+
+
+
+  /* ---------- Main Section 6 Technology Start ---------- */
+  /* ---------- Main Section 6 Technology End ---------- */
+
+
+
+
+  /* ---------- Main Section 7 Contents Start ---------- */
+  /* ---------- Main Section 7 Contents End ---------- */
+
+  /* ---------- Main Custom End ---------- */
+
 }
-
-/* ---------- Main Section 2 Product End ---------- */
-
-
-
-
-/* ---------- Main Section 3 Navi Start ---------- */
-/* ---------- Main Section 3 Navi End ---------- */
-
-
-
-
-/* ---------- Main Section 4 ElectricCar Start ---------- */
-/* ---------- Main Section 4 ElectricCar End ---------- */
-
-
-
-
-/* ---------- Main Section 5 BrandStory Start ---------- */
-/* ---------- Main Section 5 BrandStory End ---------- */
-
-
-
-
-/* ---------- Main Section 6 Technology Start ---------- */
-/* ---------- Main Section 6 Technology End ---------- */
-
-
-
-
-/* ---------- Main Section 7 Contents Start ---------- */
-/* ---------- Main Section 7 Contents End ---------- */
-
-/* ---------- Main Custom End ---------- */
-
 
 @media (max-width:414px) {
 
@@ -1702,6 +1828,38 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 3 Navi Start ---------- */
+
+  .sec-navi {
+    padding: 60px 0;
+  }
+
+  .sec-navi .container {
+    padding: 0 16px;
+    max-width: 650px;
+  }
+
+  .sec-navi ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .sec-navi ul>li {
+    width: calc(100% / 4);
+  }
+
+  .sec-navi ul>li>a {
+    height: 110px;
+    padding: 20px 0;
+  }
+
+  .sec-navi ul>li .img-box {
+    width: 38px;
+  }
+
+  .sec-navi ul>li .text {
+    font-size: 14px;
+  }
+
   /* ---------- Main Section 3 Navi End ---------- */
 
 

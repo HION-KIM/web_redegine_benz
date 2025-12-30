@@ -95,7 +95,6 @@
       display: flex;
       justify-content: space-between;
       gap: 32px;
-      flex-wrap: wrap;
     }
 
     .sec-navi ul>li {
@@ -151,7 +150,7 @@
       width: 100%;
     }
 
-    @media (max-width:1240px) {
+    @media (max-width:1240px) and (min-width:769px) {
 
       .sec-navi {
         padding: 100px 0;
@@ -178,8 +177,7 @@
       }
     }
 
-    @media (max-width:768px) {
-
+    @media (max-width:768px) and (min-width:415px) {
       .sec-navi {
         padding: 60px 0;
       }
@@ -189,25 +187,58 @@
         max-width: 650px;
       }
 
+      .sec-navi ul {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
       .sec-navi ul>li {
         width: calc(100% / 4);
+      }
+
+      .sec-navi ul>li>a {
+        height: 136px;
+      }
+
+      .sec-navi ul>li .img-box {
+        width: 52px;
+      }
+
+      .sec-navi ul>li .text {
+        font-size: 14px;
       }
     }
 
     @media (max-width:414px) {
+      .sec-navi {
+        padding: 60px 0;
+      }
+
       .sec-navi .container {
         padding: 0 16px;
         max-width: 650px;
+      }
+
+      .sec-navi ul {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .sec-navi ul>li {
+        width: calc(100% / 4);
+      }
+
+      .sec-navi ul>li>a {
+        height: 110px;
+        padding: 20px 0;
       }
 
       .sec-navi ul>li .img-box {
         width: 38px;
       }
 
-
-      .sec-navi ul>li>a {
-        height: 110px;
-        padding: 20px 0;
+      .sec-navi ul>li .text {
+        font-size: 14px;
       }
     }
   </style>
