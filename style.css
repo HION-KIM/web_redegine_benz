@@ -1284,6 +1284,101 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
 /* ---------- Main Section 5 BrandStory Start ---------- */
+.sec-brand-story .container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.sec-brand-story .container>div {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sec-brand-story .container>.content {
+  min-width: 800px;
+  align-self: center;
+}
+
+.sec-brand-story .container>.content>div {
+  width: 736px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.sec-brand-story .container>.content .h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 96px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 40px;
+}
+
+.sec-brand-story .container>.content .text-box-wrap {
+  width: 410px;
+  height: 202px;
+  position: relative;
+  margin-left: auto;
+}
+
+.sec-brand-story .container>.content .text-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sec-brand-story .container>.content .h2 {
+  font-family: "Playfair", serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 46px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.sec-brand-story .container>.content p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 1.7;
+}
+
+.sec-brand-story .container>.content p:nth-child(3) {
+  display: none
+}
+
+.sec-brand-story .container>.marquee {
+  max-width: 483px;
+  position: relative;
+}
+
+.sec-brand-story .container>.marquee>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sec-brand-story .container>.marquee-2>div {
+  top: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.sec-brand-story .container>.marquee-1>div>div {
+  margin-bottom: 32px;
+}
+
+.sec-brand-story .container>.marquee-2>div>div {
+  margin-bottom: 0;
+  margin-top: 32px;
+}
+
+.sec-brand-story .container>.marquee img {
+  display: block;
+  width: 100%;
+}
+
 /* ---------- Main Section 5 BrandStory End ---------- */
 
 
@@ -1451,6 +1546,49 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 5 BrandStory Start ---------- */
+  .sec-brand-story .container>.content {
+    min-width: 600px;
+  }
+
+  .sec-brand-story .container>.content>div {
+    max-width: 600px;
+    padding: 0 80px;
+  }
+
+
+  .sec-brand-story .container>.content .h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+  }
+
+  .sec-brand-story .container>.content .h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+    line-height: auto;
+  }
+
+  .sec-brand-story .container>.content p:nth-child(2) {
+    font-size: 14px;
+    line-height: 23.8px;
+  }
+
+  .sec-brand-story .container>.content .text-box-wrap {
+    width: 400px;
+    height: 180px;
+  }
+
+  .sec-brand-story .container>.marquee-1 {
+    display: none;
+  }
+
+  .sec-brand-story .container>.marquee {
+    max-width: 350px;
+  }
+
+  .sec-brand-story .container>.marquee-2>div>div {
+    margin-top: 16px;
+  }
+
   /* ---------- Main Section 5 BrandStory End ---------- */
 
 
@@ -1755,6 +1893,106 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 5 BrandStory Start ---------- */
+  .sec-brand-story .container {
+    height: auto;
+  }
+
+  .sec-brand-story .container>.content {
+    min-width: 414px;
+    width: 100%;
+  }
+
+  .sec-brand-story .container>.content>div {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+
+
+  .sec-brand-story .container>.content .h1 {
+    font-size: 54px;
+    margin-bottom: 60px;
+
+  }
+
+  .sec-brand-story .container>.content .h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+    line-height: auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .sec-brand-story .container>.content .h2::after {
+    content: "+";
+    display: block;
+    width: 18px;
+  }
+
+  .sec-brand-story .container>.content .h2.active::after {
+    content: "-";
+    display: block;
+    width: 18px;
+  }
+
+
+  .sec-brand-story .container>.marquee-1 {
+    display: none;
+  }
+
+  .sec-brand-story .container>.marquee-2 {
+    display: none;
+  }
+
+  .sec-brand-story .container>.marquee {
+    max-width: 350px;
+  }
+
+  .sec-brand-story .container>.marquee-2>div>div {
+    margin-top: 16px;
+  }
+
+  .sec-brand-story .container>.content .text-box-wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .sec-brand-story .container>.content .text-box-wrap>.text-box {
+    position: static;
+    border-top: 1px solid #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sec-brand-story .container>.content p:nth-child(2) {
+    display: none;
+    font-size: 14px;
+    line-height: 23.8px;
+  }
+
+  .sec-brand-story .container>.content p:nth-child(3) {
+    font-size: 16px;
+    line-height: 23.8px;
+    text-align: justify;
+    padding-left: 80px;
+    display: none;
+    width: 100%;
+    white-space: wrap;
+    box-sizing: border-box;
+    margin-top: 18px;
+  }
+
+  .sec-brand-story .container>.content .text-box:last-child {
+    border-bottom: 1px solid #fff;
+  }
+
   /* ---------- Main Section 5 BrandStory End ---------- */
 
 
@@ -2080,6 +2318,60 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 5 BrandStory Start ---------- */
+  .sec-brand-story .container {
+    height: auto;
+  }
+
+  .sec-brand-story .container>.content {
+    min-width: 310px;
+    width: 100%;
+  }
+
+  .sec-brand-story .container>.content>div {
+    width: 100%;
+    max-width: 650px;
+    padding: 60px 16px;
+  }
+
+  .sec-brand-story .container>.content .h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    line-height: 90px;
+
+  }
+
+  .sec-brand-story .container>.content .h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+    line-height: auto;
+    text-align: right;
+  }
+
+
+  .sec-brand-story .container>.content .text-box:not(:nth-child(1)) {
+    display: none;
+  }
+
+  .sec-brand-story .container>.content p:nth-child(2) {
+    display: none;
+  }
+
+  .sec-brand-story .container>.marquee {
+    display: none;
+  }
+
+  .sec-brand-story .container>.content .text-box-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .sec-brand-story .container>.content .text-box-wrap>.text-box {
+    position: static;
+    width: 100%;
+  }
+
   /* ---------- Main Section 5 BrandStory End ---------- */
 
 

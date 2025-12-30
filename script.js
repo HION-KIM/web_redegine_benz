@@ -112,7 +112,6 @@ function HeaderEventInit() {
     hambergerMenuBoxMoVerInit();
 }
 
-
 function MainSection1BannerInit() {
     let $autoPlayState = true;
 
@@ -210,7 +209,61 @@ function MainSection2ProductInit() {
     CategorySelect();
 }
 
+function MainSection5BrandStoyuInit() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
+            var scrollTime = 7000;
+
+            var tl = gsap.timeline();
+
+            tl.from(".marquee-img-wrap-1", { yPercent: -110 }, 0)
+                .from('.marquee-img-wrap-2', { yPercent: +110 }, 0);
+
+            ScrollTrigger.create({
+                animation: tl,
+                trigger: ".sec-brand-story",
+                start: "top top",
+                end: "+=" + scrollTime,
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                // markers: true,
+            });
+
+            gsap.set(".text-box", { opacity: 0 });
+            gsap.set(".text-box-1", { opacity: 1 });
+
+            var opa = gsap.timeline();
+            opa.to(".text-box-1", { opacity: 0 })
+                .to(".text-box-2", { opacity: 1 })
+                .to(".text-box-2", { opacity: 0 })
+                .to(".text-box-3", { opacity: 1 });
+
+            ScrollTrigger.create({
+                animation: opa,
+                trigger: ".sec-brand-story",
+                start: "top top",
+                end: "+=" + scrollTime,
+                scrub: true,
+                markers: true,
+            });
+        }
+    });
+
+    function toggleSlide() {
+        $('.sec-brand-story .text-box-wrap>.text-box>.h2').click(function () {
+            if ($(window).width() >= 415 && $(window).width() <= 767)
+                $(this).toggleClass('active').parent().find('p:nth-child(3)').slideToggle();
+        });
+    }
+
+    toggleSlide();
+
+}
 
 HeaderEventInit();
 MainSection1BannerInit();
 MainSection2ProductInit();
+MainSection5BrandStoyuInit();

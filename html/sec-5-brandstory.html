@@ -218,7 +218,7 @@
             width: 100%;
         }
 
-        @media (max-width:1240px) {
+        @media (max-width:1240px) and (min-width:769px) {
             .sec-brand-story .container>.content {
                 min-width: 600px;
             }
@@ -311,9 +311,20 @@
             }
 
 
+            .sec-brand-story .container>.marquee-1 {
+                display: none;
+            }
 
             .sec-brand-story .container>.marquee-2 {
                 display: none;
+            }
+
+            .sec-brand-story .container>.marquee {
+                max-width: 350px;
+            }
+
+            .sec-brand-story .container>.marquee-2>div>div {
+                margin-top: 16px;
             }
 
             .sec-brand-story .container>.content .text-box-wrap {
@@ -333,6 +344,8 @@
 
             .sec-brand-story .container>.content p:nth-child(2) {
                 display: none;
+                font-size: 14px;
+                line-height: 23.8px;
             }
 
             .sec-brand-story .container>.content p:nth-child(3) {
