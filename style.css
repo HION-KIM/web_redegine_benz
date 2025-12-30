@@ -1171,6 +1171,113 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
 /* ---------- Main Section 4 ElectricCar Start ---------- */
+.sec-Electric-Intelligence {
+  min-width: 310px;
+}
+
+.sec-Electric-Intelligence .Electric-banner {
+  width: 100%;
+}
+
+.sec-Electric-Intelligence .Electric-banner img {
+  display: block;
+  width: 100%;
+
+}
+
+.sec-Electric-Intelligence .container {
+  max-width: 1320px;
+  padding: 120px 36px 180px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.sec-Electric-Intelligence .container .h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 54.6px;
+  letter-spacing: -1.26px;
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+.sec-Electric-Intelligence .container nav {
+  width: 100%;
+}
+
+.sec-Electric-Intelligence .container nav>ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.img-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.img-box>a {
+  display: block;
+  width: 100%;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.img-box>a>img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: all .7s ease;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.img-box:hover>a>img {
+  transform: scale(1.08);
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.text-box {
+  color: #fff;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.8px;
+  margin-bottom: 8px;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.8px;
+  text-align: justify;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.btn-box {
+  display: none;
+  border: 1px solid #fff;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.btn-box>a {
+  padding: 8px 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sec-Electric-Intelligence .container nav>ul>li>.btn-box>a>span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
 /* ---------- Main Section 4 ElectricCar End ---------- */
 
 
@@ -1318,6 +1425,26 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 4 ElectricCar Start ---------- */
+  .sec-Electric-Intelligence .container {
+    max-width: 1000px;
+    padding: 60px 36px;
+  }
+
+  .sec-Electric-Intelligence .container .h1 {
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+
+
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+    font-size: 18px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+    font-size: 14px;
+  }
+
   /* ---------- Main Section 4 ElectricCar End ---------- */
 
 
@@ -1581,6 +1708,47 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 4 ElectricCar Start ---------- */
+  .sec-Electric-Intelligence .container {
+    max-width: 650px;
+    padding: 40px 20px;
+  }
+
+  .sec-Electric-Intelligence .container .h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    line-height: 40px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li {
+    gap: 24px;
+    flex-direction: row;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+    max-width: 186px;
+    flex-grow: 1;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+    display: inline-block;
+    color: #fff;
+    padding: 16px 0;
+    min-width: 240px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+    font-size: 18px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+    font-size: 14px;
+  }
+
   /* ---------- Main Section 4 ElectricCar End ---------- */
 
 
@@ -1866,6 +2034,46 @@ swiper-horizontal>.swiper-pagination-bullets,
 
 
   /* ---------- Main Section 4 ElectricCar Start ---------- */
+  .sec-Electric-Intelligence .container {
+    padding: 40px 16px;
+  }
+
+  .sec-Electric-Intelligence .container .h1 {
+    font-size: 20px;
+    margin-bottom: 32px;
+    line-height: 24px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul {
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+    max-width: none;
+    width: 100%;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+    display: block;
+    color: #fff;
+    padding: 0px 0;
+    min-width: none;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+    margin-bottom: 4px;
+  }
+
+  .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
+    display: block;
+  }
+
   /* ---------- Main Section 4 ElectricCar End ---------- */
 
 

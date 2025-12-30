@@ -72,10 +72,10 @@
   </main>
 
   <style>
-
     .sec-Electric-Intelligence {
       min-width: 310px;
     }
+
     .sec-Electric-Intelligence .Electric-banner {
       width: 100%;
     }
@@ -163,7 +163,7 @@
 
     .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
       display: none;
-      border:1px solid #fff;
+      border: 1px solid #fff;
     }
 
     .sec-Electric-Intelligence .container nav>ul>li>.btn-box>a {
@@ -181,7 +181,7 @@
 
 
 
-    @media (max-width:1240px) {
+    @media (max-width:1240px) and (min-width:769px) {
 
       .sec-Electric-Intelligence .container {
         max-width: 1000px;
@@ -193,8 +193,6 @@
         margin-bottom: 60px;
       }
 
-
-
       .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
         font-size: 18px;
       }
@@ -204,7 +202,7 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (min-width:415px) {
       .sec-Electric-Intelligence .container {
         max-width: 650px;
         padding: 40px 20px;
@@ -238,47 +236,55 @@
         min-width: 240px;
       }
 
-      @media (max-width:414px) {
-        .sec-Electric-Intelligence .container {
-          padding: 40px 16px;
-        }
-
-        .sec-Electric-Intelligence .container .h1 {
-          font-size: 20px;
-          margin-bottom: 32px;
-          line-height: 24px;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul {
-          gap: 40px;
-          flex-direction: column;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul>li {
-          gap: 12px;
-          flex-direction: column;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul>li>.img-box {
-          max-width: none;
-          width: 100%;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul>li>.text-box {
-          color: #fff;
-          padding: 0px 0;
-          min-width: none;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
-          margin-bottom: 4px;
-        }
-
-        .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
-          display: block;
-        }
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+        font-size: 18px;
       }
 
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box>p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width:414px) {
+      .sec-Electric-Intelligence .container {
+        padding: 40px 16px;
+      }
+
+      .sec-Electric-Intelligence .container .h1 {
+        font-size: 20px;
+        margin-bottom: 32px;
+        line-height: 24px;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul {
+        gap: 40px;
+        flex-direction: column;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li {
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.img-box {
+        max-width: none;
+        width: 100%;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box {
+        display: block;
+        color: #fff;
+        padding: 0px 0;
+        min-width: none;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.text-box>span {
+        margin-bottom: 4px;
+      }
+
+      .sec-Electric-Intelligence .container nav>ul>li>.btn-box {
+        display: block;
+      }
     }
   </style>
 </body>
