@@ -263,6 +263,8 @@ function MainSection5BrandStoyuInit() {
 
 }
 
+
+AOS.init();
 HeaderEventInit();
 MainSection1BannerInit();
 MainSection2ProductInit();
