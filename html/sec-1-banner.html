@@ -328,7 +328,8 @@
       width: 100vw;
       height: calc(100vh - 100px);
       white-space: nowrap;
-      min-width:310px;
+      min-width: 310px;
+      padding-top:100px;
     }
 
     .banners .swiper-slide {
@@ -422,10 +423,6 @@
       width: 100%;
     }
 
-    /* ---------- Banner Custom End ---------- */
-
-
-    /* ---------- Swiper Pagination Custom Start ---------- */
     .banners .swiper-pagination-wrapper {
       position: absolute;
       bottom: 5%;
@@ -498,16 +495,18 @@
 
     /* ---------- Swiper Pagination Custom End ---------- */
 
-    @media (max-width:1240px) {
+    @media (max-width:1240px) and (min-width : 769px) {
       .banners {
         height: calc(100vh - 80px);
+        padding-top:80px;
       }
     }
 
-    @media (max-width:768px) {
+    @media (max-width:768px) and (min-width : 415px) {
 
       .banners {
         height: calc(100vh - 60px);
+        padding-top:60px;
       }
 
       .banners .swiper-slide {
@@ -553,17 +552,44 @@
     }
 
     @media (max-width:414px) {
+
+      .banners {
+        height: calc(100vh - 60px);
+        padding-top:60px;
+      }
+
+      .banners .swiper-slide {
+        padding-top: 10vh;
+      }
+
       .banners .content {
+        max-width: 650px;
+        justify-content: flex-start;
         padding: 0 10px;
       }
 
+
+      .banners .content .text-box>.brand-name {
+        font-size: 18px;
+      }
+
       .banners .content .text-box .h1 {
+        white-space: wrap;
         font-size: 50px;
         height: 140px;
       }
 
+      .banners .content .button {
+        margin-top: 20px;
+      }
+
       .banners .content .button>div {
         font-size: 14px;
+      }
+
+      .banners .content .button>div img {
+        width: 20px;
+        height: 20px;
       }
 
       .banners .swiper-pagination>.swiper-pagination-bullet {
@@ -586,11 +612,11 @@
 
     let $autoPlayState = true;
 
-    var swiper = new Swiper(".mySwiper", {
+    var swiperBanner = new Swiper(".banners-Swiper", {
       loop: true,
       speed: 1000,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".banners-Swiper>.swiper-pagination-wrapper>.swiper-pagination",
         clickable: true,
       },
       autoplay: {
@@ -608,19 +634,17 @@
 
     $('.toggle-btn').click(function () {
       if ($autoPlayState) {
-        swiper.autoplay.stop();
+        swiperBanner.autoplay.stop();
         $('.play').addClass('active');
         $('.pause').removeClass('active');
       } else {
-        swiper.autoplay.start();
+        swiperBanner.autoplay.start();
         $('.pause').addClass('active');
         $('.play').removeClass('active');
       }
 
       $autoPlayState = !$autoPlayState;
     })
-
-    autoPlayToggle();
 
 
 

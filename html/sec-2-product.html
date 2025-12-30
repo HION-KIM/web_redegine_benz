@@ -978,7 +978,7 @@
   /* --------- Product-swiper Custom End ---------- */
 
 
-  @media (max-width:1240px) {
+  @media (max-width:1240px) and (min-width: 769px) {
 
 
     .sec-product {
@@ -1014,14 +1014,9 @@
     }
   }
 
-  @media (max-width:768px) {
-
+  @media (max-width:768px) and (min-width:415px){
     .sec-product {
       padding: 80px 0 40px 0;
-    }
-
-    .sec-product .text {
-      font-size: 14px;
     }
 
     .sec-product>.container {
@@ -1034,17 +1029,31 @@
       font-size: 28px;
     }
 
+
+    .sec-product .text {
+      font-size: 14px;
+    }
+
     .sec-product .drop-box {
       margin-bottom: 40px;
+    }
+
+    .sec-product .drop-box>.select-btn {
+      padding: 8px 0;
+    }
+
+    .sec-product .drop-box>.select-btn>span {
+      font-size: 14px;
     }
 
     .sec-product .Product-swiper .swiper-slide .h2 {
       font-size: 14px;
     }
 
-    .sec-product .Product-swiper .swiper-slide .detail-btn a {
-      font-size: 12px;
-      padding: 8px 16px;
+    .sec-product .drop-box>.select-list>li {
+      padding: 14px;
+      cursor: pointer;
+      font-size: 14px
     }
 
     .sec-product .Product-swiper {
@@ -1057,8 +1066,20 @@
       padding: 16px;
     }
 
+    .sec-product .Product-swiper .swiper-slide .detail-btn a {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+
+
+
     .sec-product .Product-swiper .swiper-pagination {
       gap: 8px;
+    }
+
+    .sec-product .Product-swiper .swiper-pagination>.swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
     }
   }
 
@@ -1068,12 +1089,26 @@
       padding: 80px 0 40px 0;
     }
 
+    .sec-product>.container {
+      max-width: auto;
+      padding: 0 16px;
+
+    }
+
     .sec-product .h1 {
       font-size: 20px;
     }
 
     .sec-product .text {
       font-size: 12px;
+    }
+
+    .sec-product .drop-box {
+      margin-bottom: 40px;
+    }
+
+    .sec-product .drop-box>.select-btn {
+      padding: 8px 0;
     }
 
     .sec-product .drop-box>.select-btn>span {
@@ -1086,18 +1121,14 @@
       font-size: 12px
     }
 
-    .sec-product>.container {
-      max-width: auto;
-      padding: 0 16px;
-
-    }
-
     .sec-product .Product-swiper {
       height: 388px;
     }
 
     .sec-product .Product-swiper .swiper-slide {
       height: 344px;
+      min-width: auto;
+      padding: 16px;
     }
 
     .sec-product .Product-swiper .swiper-slide .detail-btn a {
@@ -1108,7 +1139,7 @@
     }
 
     .sec-product .Product-swiper .swiper-pagination {
-      gap:4px;
+      gap: 4px;
     }
 
     .sec-product .Product-swiper .swiper-pagination>.swiper-pagination-bullet {
@@ -1121,7 +1152,7 @@
 
 <script>
 
-  var swiper = new Swiper(".Product-swiper", {
+  var swiperProduct = new Swiper(".Product-swiper", {
     loop: true,
     speed: 500,
     slidesPerView: 3,

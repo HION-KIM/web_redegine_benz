@@ -1,4 +1,4 @@
-function HeaderEvent() {
+function HeaderEventInit() {
     function headerMenuEvent() {
         $('header .menu_box>ul>li').mouseenter(function () {
             $('.menu_box>ul').addClass('active');
@@ -113,6 +113,104 @@ function HeaderEvent() {
 }
 
 
+function MainSection1BannerInit() {
+    let $autoPlayState = true;
+
+    var swiperBanner = new Swiper(".banners-Swiper", {
+        loop: true,
+        speed: 1000,
+        pagination: {
+            el: ".banners-Swiper>.swiper-pagination-wrapper>.swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        on: {
+            init: function () {
+                $autoPlayState = this.autoplay.running;
+            }
+        }
+    });
 
 
-HeaderEvent();
+
+
+    $('.toggle-btn').click(function () {
+        if ($autoPlayState) {
+            swiperBanner.autoplay.stop();
+            $('.play').addClass('active');
+            $('.pause').removeClass('active');
+        } else {
+            swiperBanner.autoplay.start();
+            $('.pause').addClass('active');
+            $('.play').removeClass('active');
+        }
+
+        $autoPlayState = !$autoPlayState;
+    })
+}
+
+function MainSection2ProductInit() {
+
+    var swiperProduct = new Swiper(".Product-swiper", {
+        loop: true,
+        speed: 500,
+        slidesPerView: 3,
+        spaceBetween: 40,
+        slidesPerGroup: 3,
+        pagination: {
+            el: ".Product-swiper>.swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            415: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+            },
+            769: {
+                spaceBetween: 40,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            1241: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 40,
+            },
+        }
+    });
+
+    function CategorySelect() {
+        $('.sec-product .drop-box').mouseenter(function () {
+            $(this).addClass('hover');
+        });
+        $('.sec-product .drop-box').mouseleave(function () {
+            $(this).removeClass('hover');
+        });
+        $('.sec-product .drop-box>.select-list>li').on('click', function () {
+            let $idx = $(this).index();
+
+            $('.sec-product .drop-box').removeClass('hover');
+
+            $('.sec-product .drop-box>.select-btn>span').siblings().removeClass('active');
+            $('.sec-product .drop-box>.select-btn').find('span').eq($idx).addClass('active');
+
+            $('.sec-product .swiper-box >li').siblings().removeClass('active');
+            $('.sec-product .swiper-box').find('li').eq($idx).addClass('active');
+
+        });
+    }
+
+    CategorySelect();
+}
+
+
+HeaderEventInit();
+MainSection1BannerInit();
+MainSection2ProductInit();
