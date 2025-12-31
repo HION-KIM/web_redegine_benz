@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 function HeaderEventInit() {
     function headerMenuEvent() {
         $('header .menu_box>ul>li').mouseenter(function () {
@@ -210,8 +212,6 @@ function MainSection2ProductInit() {
 }
 
 function MainSection5BrandStoyuInit() {
-    gsap.registerPlugin(ScrollTrigger);
-
     ScrollTrigger.matchMedia({
         "(min-width: 769px)": function () {
             var scrollTime = 7000;
@@ -263,6 +263,47 @@ function MainSection5BrandStoyuInit() {
 
 }
 
+function MainSection6TechnologyInit() {
+    $('.right-move').each(function () {
+        gsap.from(this, {
+            xPercent: -20,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: this,
+                start: 'top top+=300',
+                // markers: true,
+            }
+        });
+    });
+
+    $('.left-move').each(function () {
+        gsap.from(this, {
+            xPercent: -20,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: this,
+                start: 'top+=200 top',
+                // markers: true,
+            }
+        });
+    });
+
+    $('.top-move').each(function () {
+        gsap.from(this, {
+            yPercent: 20,
+            opacity: 0,
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: this,
+                start: 'top top+=300',
+                // markers: true,
+            }
+        });
+    });
+}
+
 function FooterInit() {
     $('.arcodian_menu >ul > li:not(:last-child)').click(function () {
         var $this = $(this);
@@ -271,10 +312,9 @@ function FooterInit() {
     });
 }
 
-
-AOS.init();
 HeaderEventInit();
 MainSection1BannerInit();
 MainSection2ProductInit();
 MainSection5BrandStoyuInit();
+MainSection6TechnologyInit()
 FooterInit();

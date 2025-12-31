@@ -238,9 +238,9 @@ header .side_menu_box .side_menu_bar {
   width: 384px;
   height: 100%;
   background-color: #000;
-  font-size: 18px;
+  font-size: clamp(14px, 1.89vh, 18px);
   font-weight: 400;
-  padding: 40px;
+  padding: clamp(20px, 4.21vh, 40px);
   box-sizing: border-box;
   transition: left .7s ease;
 }
@@ -1389,7 +1389,6 @@ swiper-horizontal>.swiper-pagination-bullets,
   max-width: 1320px;
   box-sizing: border-box;
   padding: 120px 36px;
-  border: 1px solid red;
   margin: 0 auto;
 }
 

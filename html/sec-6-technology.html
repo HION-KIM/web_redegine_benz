@@ -15,10 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <!-- Script GSAP ScrollTrigger's Js -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <!-- Link AOS's CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Script AOS's JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 
@@ -33,7 +29,7 @@
         <section class="sec-Technology">
             <div class="container">
                 <div class="content-wrap-1">
-                    <div class="content" data-aos="fade-right" data-aos-offset="400" data-aos-duration="1000"  data-aos-once="true">
+                    <div class="content right-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-1.jpg" alt="img-tech">
                         </div>
@@ -44,7 +40,7 @@
                                 배기가스 배출량은 Zero입니다.​</p>
                         </div>
                     </div>
-                    <div class="content" data-aos="fade-left" data-aos-offset="900" data-aos-duration="1000" data-aos-once="true">
+                    <div class="content left-move">
                         <div>
                             <span>DRIVE PILOT​</span>
                             <p>Mercedes-Benz의 최신 주행 기술은 혁신을 불러일으키고 있습니다. 드라이브 파일럿 기능을 작동하면, 차량을 자동으로 제어하며 운전자는 다른 일에
@@ -58,7 +54,7 @@
                     </div>
                 </div>
                 <div class="content-wrap-2">
-                    <div class="content" data-aos="fade-right" data-aos-offset="400" data-aos-duration="1000" data-aos-once="true">
+                    <div class="content right-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-3.jpg" alt="img-tech">
                         </div>
@@ -71,7 +67,7 @@
                                 주기도 합니다.​</p>
                         </div>
                     </div>
-                    <div class="content" data-aos="fade-left" data-aos-offset="900" data-aos-duration="1000" data-aos-once="true">
+                    <div class="content left-move">
                         <div>
                             <span>Mercedes-Benz Ultimate Driving Experience​</span>
                             <p>액티브 앰비언트 라이트는 차량에 생동감을 부여합니다. 사운드 익스피리언스로 주행 중 사운드 이펙트 효과를 주며 음향과 상호 작용합니다. 에너자이징
@@ -84,7 +80,7 @@
                     </div>
                 </div>
                 <div class="content-wrap-3">
-                    <div class="content" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700" data-aos-once="true">
+                    <div class="content top-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-1.jpg" alt="img-tech">
                         </div>
@@ -95,7 +91,7 @@
                                 배기가스 배출량은 Zero입니다.​</p>
                         </div>
                     </div>
-                    <div class="content" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700" data-aos-once="true">
+                    <div class="content top-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-2.jpg" alt="img-tech">
                         </div>
@@ -107,7 +103,7 @@
                                 있습니다. 메르세데스-벤츠의 자율 주행을 경험해 보세요.</p>
                         </div>
                     </div>
-                    <div class="content" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700" data-aos-once="true">
+                    <div class="content top-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-3.jpg" alt="img-tech">
                         </div>
@@ -120,7 +116,7 @@
                                 주기도 합니다.​</p>
                         </div>
                     </div>
-                    <div class="content" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700" data-aos-once="true">
+                    <div class="content top-move">
                         <div class="img-box">
                             <img src="../imgs/img-technology-4.jpg" alt="img-tech">
                         </div>
@@ -311,7 +307,47 @@
     </style>
 
     <script>
-        AOS.init();
+        gsap.registerPlugin(ScrollTrigger);
+
+        $('.right-move').each(function () {
+            gsap.from(this, {
+                xPercent: -20,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: this,
+                    start: 'top top+=300',
+                    // markers: true,
+                }
+            });
+        });
+
+        $('.left-move').each(function () {
+            gsap.from(this, {
+                xPercent: -20,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: this,
+                    start: 'top+=200 top',
+                    markers: true,
+                }
+            });
+        });
+
+        $('.top-move').each(function () {
+            gsap.from(this, {
+                yPercent: 20,
+                opacity: 0,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: this,
+                    start: 'top top+=300',
+                    markers: true,
+                }
+            });
+        });
+
     </script>
 
 </body>
